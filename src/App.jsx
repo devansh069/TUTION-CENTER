@@ -142,6 +142,8 @@ export default function App() {
   const [activePage, setActivePage] = useState('dashboard');
   const [activeReportTab, setActiveReportTab] = useState('');
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [language, setLanguage] = useState('en');
   const [isTourOpen, setIsTourOpen] = useState(false);
   const [isInDashboardTourOpen, setIsInDashboardTourOpen] = useState(false);
 
@@ -328,7 +330,9 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-900 flex font-sans antialiased">
+    <div className={`min-h-screen flex font-sans antialiased transition-colors duration-200 ${
+      isDarkMode ? 'bg-slate-950 text-slate-100' : 'bg-[#f8fafc] text-slate-900'
+    }`}>
       {/* 16-Module Accordion Sidebar */}
       <Sidebar
         activeModule={activeModule}
@@ -342,6 +346,7 @@ export default function App() {
         setActiveReportTab={setActiveReportTab}
         sidebarCollapsed={sidebarCollapsed}
         setSidebarCollapsed={setSidebarCollapsed}
+        isDarkMode={isDarkMode}
       />
 
       {/* Main Content Area */}
@@ -357,6 +362,10 @@ export default function App() {
           activeModuleTitle={currentModuleDef.title}
           activePageTitle={activePageTitle}
           sidebarCollapsed={sidebarCollapsed}
+          isDarkMode={isDarkMode}
+          setIsDarkMode={setIsDarkMode}
+          language={language}
+          setLanguage={setLanguage}
         />
 
         {/* Dynamic Page Header / Banner */}

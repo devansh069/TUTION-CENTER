@@ -328,6 +328,7 @@ export default function Sidebar({
   setActiveReportTab,
   sidebarCollapsed,
   setSidebarCollapsed,
+  isDarkMode = false,
 }) {
   const [expandedModules, setExpandedModules] = useState({ [activeModule]: true });
   const [expandedReports, setExpandedReports] = useState({ [activeModule]: true });
@@ -360,25 +361,29 @@ export default function Sidebar({
 
   return (
     <aside
-      className={`bg-white border-r border-slate-200/80 transition-all duration-300 flex flex-col z-30 shadow-[1px_0_10px_rgba(0,0,0,0.03)] ${
+      className={`transition-all duration-300 flex flex-col z-30 shadow-[1px_0_10px_rgba(0,0,0,0.03)] ${
         sidebarCollapsed ? 'w-20' : 'w-72'
-      } fixed inset-y-0 left-0`}
+      } fixed inset-y-0 left-0 ${
+        isDarkMode ? 'bg-slate-900 border-r border-slate-800 text-slate-200' : 'bg-white border-r border-slate-200/80 text-slate-800'
+      }`}
     >
       {/* Brand Header */}
-      <div className="h-16 px-4 border-b border-slate-100 flex items-center justify-between bg-white">
+      <div className={`h-16 px-4 border-b flex items-center justify-between ${
+        isDarkMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-100'
+      }`}>
         {!sidebarCollapsed && (
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-purple-600 text-white flex items-center justify-center font-black text-base shadow-sm">
               E
             </div>
             <div>
-              <div className="font-extrabold text-sm tracking-tight text-slate-900 flex items-center gap-1.5">
+              <div className={`font-extrabold text-sm tracking-tight flex items-center gap-1.5 ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>
                 <span>EDUMISSION</span>
                 <span className="text-[9px] uppercase font-black bg-indigo-50 text-indigo-700 px-1.5 py-0.5 rounded border border-indigo-200">
                   Super Admin
                 </span>
               </div>
-              <div className="text-[10px] text-slate-600 font-medium">EduMission Tuition Center Cloud</div>
+              <div className={`text-[10px] font-medium ${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`}>EduMission Tuition Center Cloud</div>
             </div>
           </div>
         )}
