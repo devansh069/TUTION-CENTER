@@ -109,12 +109,24 @@ import AIDashboard from './modules/00_ai_copilot/Dashboard';
 
 // 17: SMTP / Email Gateway
 import SmtpDashboard from './modules/17_smtp_email/Dashboard';
+import EmailCampaignDispatcher from './modules/17_smtp_email/EmailCampaignDispatcher';
+import TemplatesManager from './modules/17_smtp_email/TemplatesManager';
+import SendHistoryLogs from './modules/17_smtp_email/SendHistoryLogs';
+import SmtpRelayTelemetry from './modules/17_smtp_email/SmtpRelayTelemetry';
+import SmtpReports from './modules/17_smtp_email/Reports';
 
 // 18: WhatsApp Lead Funnel & CRM
 import WhatsAppCrmDashboard from './modules/18_whatsapp_crm/Dashboard';
+import LeadPipelineKanban from './modules/18_whatsapp_crm/LeadPipelineKanban';
+import AIBotWorkflows from './modules/18_whatsapp_crm/AIBotWorkflows';
+import WhatsAppReports from './modules/18_whatsapp_crm/Reports';
 
 // 20: Franchise & Multi-Branch Royalty
 import FranchiseRoyaltyDashboard from './modules/20_franchise_royalty/Dashboard';
+import BranchOnboarding from './modules/20_franchise_royalty/BranchOnboarding';
+import RoyaltyLedger from './modules/20_franchise_royalty/RoyaltyLedger';
+import ResourceRequisitions from './modules/20_franchise_royalty/ResourceRequisitions';
+import FranchiseReports from './modules/20_franchise_royalty/Reports';
 
 // 21: Audit Trail & Activity Logs
 import AuditTrailDashboard from './modules/21_audit_trail/Dashboard';
@@ -276,15 +288,27 @@ export default function App() {
 
       // 17: SMTP / Email Gateway
       case '17_smtp_email':
-        return <SmtpDashboard instituteCode={selectedInstitute} />;
+        if (activePage === 'email_campaigns') return <EmailCampaignDispatcher instituteCode={selectedInstitute} />;
+        if (activePage === 'templates_library') return <TemplatesManager instituteCode={selectedInstitute} />;
+        if (activePage === 'send_logs') return <SendHistoryLogs instituteCode={selectedInstitute} />;
+        if (activePage === 'smtp_relay') return <SmtpRelayTelemetry instituteCode={selectedInstitute} />;
+        if (activePage === 'reports') return <SmtpReports instituteCode={selectedInstitute} activeTab={activeReportTab} />;
+        return <SmtpDashboard instituteCode={selectedInstitute} onNavigate={handleNavigate} />;
 
       // 18: WhatsApp Lead Funnel & CRM
       case '18_whatsapp_crm':
-        return <WhatsAppCrmDashboard instituteCode={selectedInstitute} />;
+        if (activePage === 'lead_pipeline') return <LeadPipelineKanban instituteCode={selectedInstitute} />;
+        if (activePage === 'bot_automations') return <AIBotWorkflows instituteCode={selectedInstitute} />;
+        if (activePage === 'reports') return <WhatsAppReports instituteCode={selectedInstitute} activeTab={activeReportTab} />;
+        return <WhatsAppCrmDashboard instituteCode={selectedInstitute} onNavigate={handleNavigate} />;
 
       // 20: Franchise & Multi-Branch Royalty
       case '20_franchise_royalty':
-        return <FranchiseRoyaltyDashboard instituteCode={selectedInstitute} />;
+        if (activePage === 'branch_onboarding') return <BranchOnboarding instituteCode={selectedInstitute} />;
+        if (activePage === 'royalty_ledgers') return <RoyaltyLedger instituteCode={selectedInstitute} />;
+        if (activePage === 'resource_requisitions') return <ResourceRequisitions instituteCode={selectedInstitute} />;
+        if (activePage === 'reports') return <FranchiseReports instituteCode={selectedInstitute} activeTab={activeReportTab} />;
+        return <FranchiseRoyaltyDashboard instituteCode={selectedInstitute} onNavigate={handleNavigate} />;
 
       // 21: Audit Trail & Activity Logs
       case '21_audit_trail':

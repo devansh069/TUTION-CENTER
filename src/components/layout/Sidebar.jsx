@@ -259,7 +259,9 @@ export const MODULE_DEFINITIONS = [
     icon: '📧',
     pages: [
       { id: 'dashboard', label: 'Dashboard' },
-      { id: 'email_campaigns', label: 'Email Campaign Dispatcher' },
+      { id: 'email_campaigns', label: 'Email & SMS Campaigns' },
+      { id: 'templates_library', label: 'Email & SMS Templates' },
+      { id: 'send_logs', label: 'Send History & Logs' },
       { id: 'smtp_relay', label: 'SMTP Relay Telemetry' },
     ],
     reports: [
@@ -287,12 +289,14 @@ export const MODULE_DEFINITIONS = [
     icon: '👑',
     pages: [
       { id: 'dashboard', label: 'Dashboard' },
-      { id: 'royalty_settlements', label: 'Royalty Invoice Settlements' },
-      { id: 'franchise_contracts', label: 'Franchise License Tracker' },
+      { id: 'branch_onboarding', label: 'Branch Onboarding' },
+      { id: 'royalty_ledgers', label: 'Royalty Collections & Ledgers' },
+      { id: 'resource_requisitions', label: 'Resource & Stock Requisitions' },
     ],
     reports: [
-      { id: 'rep_revenue_share', label: 'Gross Revenue Share Audit' },
-      { id: 'rep_compliance_audit', label: 'Brand Standard Audits' },
+      { id: 'royalty_revenue', label: 'Royalty & Revenue' },
+      { id: 'geographical', label: 'Geographical Spread' },
+      { id: 'compliance_audit', label: 'Compliance & Audits' },
     ]
   },
   {

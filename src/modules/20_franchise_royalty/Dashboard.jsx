@@ -1,62 +1,137 @@
 import React from 'react';
-import { Crown, CheckCircle2, DollarSign, Award, ShieldCheck, TrendingUp } from 'lucide-react';
-import KPICard from '../../components/common/KPICard';
-import { FRANCHISE_ROYALTY_DATA } from '../../data/erpData';
+import { Building2, Users, Receipt, MapPin, TrendingUp, AlertTriangle, Building, Briefcase } from 'lucide-react';
+import { FRANCHISE_METRICS, BRANCHES } from './franchiseData';
 
-export default function FranchiseRoyaltyDashboard({ instituteCode = 'all' }) {
-  const isAll = !instituteCode || instituteCode.toLowerCase() === 'all';
-  const filtered = FRANCHISE_ROYALTY_DATA.filter(f => isAll || f.instituteCode?.toLowerCase() === instituteCode?.toLowerCase());
+export default function Dashboard({ onNavigate }) {
+  const KPICard = ({ title, value, subtext, icon: Icon, color, trend }) => (
+    <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-xs relative overflow-hidden group hover:border-slate-300 transition-colors">
+      <div className={`absolute -right-4 -top-4 w-24 h-24 rounded-full opacity-5 ${color} blur-2xl group-hover:opacity-10 transition-opacity`} />
+      <div className="flex items-start justify-between">
+        <div>
+          <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">{title}</p>
+          <h3 className="text-2xl font-black text-slate-900">{value}</h3>
+          <p className="text-xs font-semibold text-slate-500 mt-1 flex items-center gap-1">
+            {trend && <TrendingUp className="w-3.5 h-3.5 text-emerald-500" />}
+            {subtext}
+          </p>
+        </div>
+        <div className={`p-3 rounded-xl ${color} bg-opacity-10 text-slate-700`}>
+          <Icon className="w-5 h-5" />
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <div className="space-y-6 animate-in fade-in duration-200">
-      <div className="pb-3 border-b border-slate-200">
-        <span className="px-2.5 py-0.5 rounded-md bg-amber-50 text-amber-700 text-[11px] font-extrabold uppercase tracking-wide border border-amber-200">
-          Module 20 • Multi-Tenant Franchise Governance
-        </span>
-        <h1 className="font-heading text-2xl font-black text-slate-900 flex items-center mt-1">
-          <Crown className="w-6.5 h-6.5 mr-2 text-amber-600" /> Franchise & Multi-Branch Royalty
-        </h1>
-        <p className="text-xs text-slate-500 mt-0.5">
-          Global multi-branch P&L settlements, monthly royalty percentage realization, franchisee contracts, and brand compliance audits.
-        </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <KPICard
+          title="Active Franchisees"
+          value={FRANCHISE_METRICS.totalActiveBranches}
+          subtext={`${FRANCHISE_METRICS.onboardingBranches} currently onboarding`}
+          icon={Building2}
+          color="bg-indigo-500"
+        />
+        <KPICard
+          title="Monthly Royalty"
+          value={`₹${(FRANCHISE_METRICS.totalRoyaltyCurrentMonth / 100000).toFixed(2)}L`}
+          subtext={`+${FRANCHISE_METRICS.royaltyGrowthYoY}% YoY Growth`}
+          icon={Receipt}
+          color="bg-emerald-500"
+          trend
+        />
+        <KPICard
+          title="Avg. Compliance"
+          value={`${FRANCHISE_METRICS.avgComplianceScore}%`}
+          subtext="Legal & brand guidelines"
+          icon={AlertTriangle}
+          color="bg-amber-500"
+        />
+        <KPICard
+          title="Total Reach"
+          value="18,400+"
+          subtext="Students across all networks"
+          icon={Users}
+          color="bg-blue-500"
+        />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        <KPICard title="Gross Franchise Revenue" value="$159,000" subtext="Aggregated September Cycle" icon={DollarSign} color="green" />
-        <KPICard title="Total Royalty Realized" value="$17,750" subtext="Average 11.2% Royalty Fee" icon={Crown} color="amber" />
-        <KPICard title="Active Franchise Centers" value="5 Centers" subtext="Licensed Academy Partners" icon={Award} color="blue" />
-        <KPICard title="Brand Compliance Score" value="96.3% Avg" subtext="Annual Quality Audits Met" icon={ShieldCheck} color="purple" />
-      </div>
-
-      <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs overflow-hidden">
-        <h3 className="font-heading text-sm font-bold text-slate-900 mb-4">Franchise Royalty & P&L Settlement Ledger</h3>
-        <div className="overflow-x-auto">
-          <table className="w-full text-left border-collapse text-xs">
-            <thead>
-              <tr className="bg-slate-50 text-slate-500 uppercase font-bold text-[11px] border-b border-slate-200">
-                <th className="p-3">Franchise Center</th>
-                <th className="p-3">Franchisee Entity</th>
-                <th className="p-3">Gross Revenue</th>
-                <th className="p-3">Royalty %</th>
-                <th className="p-3">Royalty Due</th>
-                <th className="p-3">Settlement Status</th>
-                <th className="p-3 text-right">Brand Audit Score</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-100">
-              {filtered.map(f => (
-                <tr key={f.id} className="hover:bg-slate-50 transition-colors">
-                  <td className="p-3 font-bold text-slate-900">{f.centerName}</td>
-                  <td className="p-3 text-slate-600">{f.franchisee}</td>
-                  <td className="p-3 font-mono font-bold text-slate-900">${f.grossRevenue.toLocaleString()}</td>
-                  <td className="p-3 font-mono text-indigo-600 font-bold">{f.royaltyRate}</td>
-                  <td className="p-3 font-mono font-black text-amber-600">${f.monthlyRoyaltyDue.toLocaleString()}</td>
-                  <td className="p-3"><span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">{f.settlementStatus}</span></td>
-                  <td className="p-3 text-right font-mono font-bold text-purple-700">{f.complianceScore}% Verified</td>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-2 space-y-4">
+          <div className="flex items-center justify-between">
+            <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight">Active Branches Network</h3>
+            <button 
+              onClick={() => onNavigate('01_institutes_branches', 'institutes_directory')}
+              className="text-xs font-bold text-indigo-600 hover:text-indigo-700"
+            >
+              View Full Directory &rarr;
+            </button>
+          </div>
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden">
+            <table className="w-full text-left text-xs">
+              <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase">
+                <tr>
+                  <th className="px-4 py-3">Branch & Location</th>
+                  <th className="px-4 py-3">Owner</th>
+                  <th className="px-4 py-3">Royalty Model</th>
+                  <th className="px-4 py-3">Compliance</th>
+                  <th className="px-4 py-3 text-right">M. Revenue</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="divide-y divide-slate-100">
+                {BRANCHES.filter(b => b.status === 'Active').map(branch => (
+                  <tr key={branch.id} className="hover:bg-slate-50 transition-colors">
+                    <td className="px-4 py-3">
+                      <div className="font-bold text-slate-900">{branch.name}</div>
+                      <div className="text-[11px] text-slate-500 flex items-center gap-1 mt-0.5">
+                        <MapPin className="w-3 h-3" /> {branch.region}
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 font-semibold text-slate-700">{branch.owner}</td>
+                    <td className="px-4 py-3 font-mono text-[11px] text-indigo-700">{branch.royaltyModel}</td>
+                    <td className="px-4 py-3">
+                      <span className={`inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold ${
+                        branch.complianceScore >= 95 ? 'bg-emerald-50 text-emerald-700' :
+                        branch.complianceScore >= 80 ? 'bg-amber-50 text-amber-700' : 'bg-rose-50 text-rose-700'
+                      }`}>
+                        {branch.complianceScore}% Score
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 text-right font-black text-slate-900">
+                      ₹{(branch.monthlyRevenue / 100000).toFixed(2)}L
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div className="space-y-4">
+          <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight">Quick Actions</h3>
+          <div className="grid grid-cols-1 gap-3">
+            {[
+              { label: 'Branch Onboarding Pipeline', icon: Building, color: 'text-indigo-600', bg: 'bg-indigo-50', page: 'branch_onboarding' },
+              { label: 'Royalty Ledgers & Invoicing', icon: Receipt, color: 'text-emerald-600', bg: 'bg-emerald-50', page: 'royalty_ledgers' },
+              { label: 'Resource & Stock Requisitions', icon: Briefcase, color: 'text-amber-600', bg: 'bg-amber-50', page: 'resource_requisitions' }
+            ].map((action, idx) => (
+              <button
+                key={idx}
+                onClick={() => onNavigate('20_franchise_royalty', action.page)}
+                className="flex items-center justify-between p-4 rounded-2xl border border-slate-200 bg-white hover:border-slate-300 hover:shadow-sm transition-all group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className={`p-2.5 rounded-xl ${action.bg} ${action.color}`}>
+                    <action.icon className="w-5 h-5" />
+                  </div>
+                  <span className="text-sm font-bold text-slate-700 group-hover:text-slate-900 transition-colors">
+                    {action.label}
+                  </span>
+                </div>
+                <span className="text-slate-400 group-hover:text-slate-600 transition-colors">&rarr;</span>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </div>
