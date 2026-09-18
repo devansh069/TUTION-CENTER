@@ -422,18 +422,11 @@ export default function App() {
           {renderModuleContent()}
         </main>
 
-        {/* Enterprise Pitch Footer */}
-        <footer className="px-6 py-4 border-t border-slate-200/80 bg-white text-slate-400 text-xs flex flex-col sm:flex-row items-center justify-between gap-2">
+        {/* Footer */}
+        <footer className="px-6 py-4 border-t border-slate-200/80 bg-white text-slate-500 text-xs flex items-center justify-center">
           <div className="flex items-center gap-2 font-medium">
             <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-            <span>© 2026 Zenith Multi-Tenant Tuition Cloud ERP. All rights reserved.</span>
-          </div>
-          <div className="flex items-center gap-4 text-[11px]">
-            <span className="hover:text-slate-600 cursor-pointer">SOC-2 Type II Certified</span>
-            <span>•</span>
-            <span className="hover:text-slate-600 cursor-pointer">Zero Trust Architecture</span>
-            <span>•</span>
-            <span className="hover:text-slate-600 cursor-pointer">Automated Facial Attendance AI v4.2</span>
+            <span>© 2026 EduMission. All rights reserved.</span>
           </div>
         </footer>
       </div>
