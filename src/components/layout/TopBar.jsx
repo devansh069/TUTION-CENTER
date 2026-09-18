@@ -10,20 +10,8 @@ export default function TopBar({
 }) {
   return (
     <header className="h-16 bg-white border-b border-slate-200/80 sticky top-0 z-20 px-4 md:px-6 flex items-center justify-between shadow-[0_1px_3px_rgba(0,0,0,0.02)]">
-      {/* Left: Breadcrumbs & Scope Indicator */}
-      <div className="flex items-center gap-3">
-        <div className="flex items-center gap-2 text-xs">
-          <span className="text-slate-600 font-semibold flex items-center gap-1">
-            <span>🏢</span> Super Admin ERP
-          </span>
-          <span className="text-slate-300">/</span>
-          <span className="text-slate-700 font-bold">{activeModuleTitle}</span>
-          <span className="text-slate-300">/</span>
-          <span className="px-2 py-0.5 bg-blue-50 text-blue-700 font-bold rounded-md border border-blue-200">
-            {activePageTitle}
-          </span>
-        </div>
-      </div>
+      {/* Left section */}
+      <div className="flex items-center gap-3"></div>
 
       {/* Center/Right: Multi-Tenant Institute Selector & Controls */}
       <div className="flex items-center gap-3">
@@ -42,12 +30,6 @@ export default function TopBar({
               </option>
             ))}
           </select>
-        </div>
-
-        {/* Live Biometric AI Health Status */}
-        <div className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-xl text-xs font-bold shadow-sm">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span>Face AI Edge: 99.8% Online</span>
         </div>
 
         {/* Global Notifications */}
