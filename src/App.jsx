@@ -85,6 +85,7 @@ import LiveClassesReports from './modules/13_live_classes/Reports';
 // Module 14: Roles & Permissions
 import RolesDashboard from './modules/14_roles_permissions/Dashboard';
 import RoleHierarchyMatrix from './modules/14_roles_permissions/RoleHierarchyMatrix';
+import CategoryAccessGrid from './modules/14_roles_permissions/CategoryAccessGrid';
 import UserAccountsManager from './modules/14_roles_permissions/UserAccountsManager';
 import RolesReports from './modules/14_roles_permissions/Reports';
 
@@ -242,6 +243,7 @@ export default function App() {
       // 14: Roles & Permissions
       case '14_roles_permissions':
         if (activePage === 'roles_matrix') return <RoleHierarchyMatrix instituteCode={selectedInstitute} />;
+        if (activePage === 'category_access') return <CategoryAccessGrid instituteCode={selectedInstitute} />;
         if (activePage === 'roles_users') return <UserAccountsManager instituteCode={selectedInstitute} />;
         if (activePage === 'reports') return <RolesReports instituteCode={selectedInstitute} activeTab={activeReportTab} />;
         return <RolesDashboard instituteCode={selectedInstitute} onNavigate={handleNavigate} />;

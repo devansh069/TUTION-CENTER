@@ -214,6 +214,7 @@ export const MODULE_DEFINITIONS = [
     pages: [
       { id: 'dashboard', label: 'Dashboard' },
       { id: 'roles_matrix', label: 'Role Permission Matrix' },
+      { id: 'category_access', label: 'Category Access & Edit Grid' },
       { id: 'roles_users', label: 'User Accounts Manager' },
     ],
     reports: [
