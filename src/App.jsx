@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import Sidebar, { MODULE_DEFINITIONS } from './components/layout/Sidebar';
 import TopBar from './components/layout/TopBar';
+import GuidedDashboardTour from './components/common/GuidedDashboardTour';
 
 // Module 01: Institutes & Branches
 import InstitutesDashboard from './modules/01_institutes_branches/Dashboard';
@@ -140,6 +141,8 @@ export default function App() {
   const [activePage, setActivePage] = useState('dashboard');
   const [activeReportTab, setActiveReportTab] = useState('');
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [isTourOpen, setIsTourOpen] = useState(false);
+  const [isInDashboardTourOpen, setIsInDashboardTourOpen] = useState(false);
 
   // Helper to get active module metadata
   const currentModuleDef = useMemo(() => {
@@ -429,6 +432,14 @@ export default function App() {
             <span>© 2026 EduMission. All rights reserved.</span>
           </div>
         </footer>
+
+        {/* Center Screen Onboarding Welcome Popup & Interactive Dashboard Tour */}
+        <GuidedDashboardTour 
+          onNavigate={(modId, pgId) => {
+            setActiveModule(modId);
+            setActivePage(pgId);
+          }}
+        />
       </div>
     </div>
   );
