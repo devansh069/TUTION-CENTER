@@ -11033,3 +11033,485 @@ export const FRANCHISE_ROYALTY_DATA = [
     "complianceScore": 94.2
   }
 ];
+
+export const BATCH_FEES_DATA = [
+  {
+    "id": "BF-101",
+    "batchName": "JEE Advanced Apex 2026",
+    "courseDuration": "1-Year Intensive (Class 12)",
+    "baseFeePerStudent": 3200,
+    "enrolledStudents": 48,
+    "grossTuitionPool": 153600,
+    "totalDiscountsAwarded": 18400,
+    "netCollectibleFee": 135200,
+    "totalCollected": 122400,
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "BF-102",
+    "batchName": "NEET Super 30 Target 2026",
+    "courseDuration": "1-Year Medical Achievers",
+    "baseFeePerStudent": 2900,
+    "enrolledStudents": 35,
+    "grossTuitionPool": 101500,
+    "totalDiscountsAwarded": 12150,
+    "netCollectibleFee": 89350,
+    "totalCollected": 81200,
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "BF-103",
+    "batchName": "Class 10 CBSE Foundation",
+    "courseDuration": "1-Year Foundation Course",
+    "baseFeePerStudent": 1800,
+    "enrolledStudents": 52,
+    "grossTuitionPool": 93600,
+    "totalDiscountsAwarded": 8400,
+    "netCollectibleFee": 85200,
+    "totalCollected": 78900,
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "BF-104",
+    "batchName": "IIT-JEE 1-Year Repeater Batch",
+    "courseDuration": "12-Month Dropper Batch",
+    "baseFeePerStudent": 3400,
+    "enrolledStudents": 40,
+    "grossTuitionPool": 136000,
+    "totalDiscountsAwarded": 16200,
+    "netCollectibleFee": 119800,
+    "totalCollected": 104500,
+    "instituteCode": "beta"
+  },
+  {
+    "id": "BF-105",
+    "batchName": "SAT & Olympiad FastTrack",
+    "courseDuration": "6-Month Crash Program",
+    "baseFeePerStudent": 2200,
+    "enrolledStudents": 28,
+    "grossTuitionPool": 61600,
+    "totalDiscountsAwarded": 4200,
+    "netCollectibleFee": 57400,
+    "totalCollected": 52800,
+    "instituteCode": "beta"
+  }
+];
+
+export const STUDENT_FEES_DISCOUNT_DATA = [
+  {
+    "id": "STU-FEE-101",
+    "studentId": "STU-1001",
+    "studentName": "Aarav Sharma",
+    "photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80",
+    "batchName": "JEE Advanced Apex 2026",
+    "baseFee": 3200,
+    "discountCategory": "30% Merit Scholarship (Rank 1-500)",
+    "discountPercent": 30,
+    "discountAmount": 960,
+    "netFeePayable": 2240,
+    "amountPaid": 2240,
+    "balanceDue": 0,
+    "paymentStatus": "Fully Paid",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "STU-FEE-102",
+    "studentId": "STU-1002",
+    "studentName": "Ananya Patel",
+    "photo": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=120&auto=format&fit=crop&q=80",
+    "batchName": "NEET Super 30 Target 2026",
+    "baseFee": 2900,
+    "discountCategory": "15% Early-Bird Registration",
+    "discountPercent": 15,
+    "discountAmount": 435,
+    "netFeePayable": 2465,
+    "amountPaid": 1800,
+    "balanceDue": 665,
+    "paymentStatus": "Partial Payment",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "STU-FEE-103",
+    "studentId": "STU-1003",
+    "studentName": "Rohan Verma",
+    "photo": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=120&auto=format&fit=crop&q=80",
+    "batchName": "JEE Advanced Apex 2026",
+    "baseFee": 3200,
+    "discountCategory": "10% Sibling Concession",
+    "discountPercent": 10,
+    "discountAmount": 320,
+    "netFeePayable": 2880,
+    "amountPaid": 1400,
+    "balanceDue": 1480,
+    "paymentStatus": "Overdue Alert",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "STU-FEE-104",
+    "studentId": "STU-1004",
+    "studentName": "Priya Nair",
+    "photo": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=120&auto=format&fit=crop&q=80",
+    "batchName": "Class 10 CBSE Foundation",
+    "baseFee": 1800,
+    "discountCategory": "25% EWS Financial Support",
+    "discountPercent": 25,
+    "discountAmount": 450,
+    "netFeePayable": 1350,
+    "amountPaid": 1350,
+    "balanceDue": 0,
+    "paymentStatus": "Fully Paid",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "STU-FEE-105",
+    "studentId": "STU-1005",
+    "studentName": "Vikram Malhotra",
+    "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80",
+    "batchName": "IIT-JEE 1-Year Repeater Batch",
+    "baseFee": 3400,
+    "discountCategory": "None (0%)",
+    "discountPercent": 0,
+    "discountAmount": 0,
+    "netFeePayable": 3400,
+    "amountPaid": 3400,
+    "balanceDue": 0,
+    "paymentStatus": "Fully Paid",
+    "instituteCode": "beta"
+  },
+  {
+    "id": "STU-FEE-106",
+    "studentId": "STU-1006",
+    "studentName": "Meera Iyer",
+    "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&auto=format&fit=crop&q=80",
+    "batchName": "SAT & Olympiad FastTrack",
+    "baseFee": 2200,
+    "discountCategory": "20% Olympiad Medalist Waiver",
+    "discountPercent": 20,
+    "discountAmount": 440,
+    "netFeePayable": 1760,
+    "amountPaid": 1200,
+    "balanceDue": 560,
+    "paymentStatus": "Partial Payment",
+    "instituteCode": "beta"
+  }
+];
+
+export const FIXED_EXPENSES_DATA = [
+  {
+    "id": "EXP-FX-101",
+    "name": "Campus Lease & Facility Rent - Kota HQ",
+    "category": "Infrastructure",
+    "monthlyAmount": 14500,
+    "vendor": "RealEstate Apex Holdings",
+    "frequency": "Monthly ACH",
+    "autoPay": "Active Auto-Debit",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "EXP-FX-102",
+    "name": "Commercial Electricity & HVAC Central Cooling",
+    "category": "Utilities",
+    "monthlyAmount": 3800,
+    "vendor": "State Electricity Distribution Corp",
+    "frequency": "Monthly Invoice",
+    "autoPay": "Manual Verification",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "EXP-FX-103",
+    "name": "Cloud Servers, Zoom Enterprise & AI Engine API",
+    "category": "Software & AI",
+    "monthlyAmount": 2400,
+    "vendor": "Amazon Web Services & OpenAI",
+    "frequency": "Monthly Direct Card",
+    "autoPay": "Active Auto-Debit",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "EXP-FX-104",
+    "name": "Security Guard Roster & CCTV Maintenance",
+    "category": "Security",
+    "monthlyAmount": 1800,
+    "vendor": "ShieldGuard Security Pvt Ltd",
+    "frequency": "Monthly Direct Transfer",
+    "autoPay": "Active Auto-Debit",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "EXP-FX-105",
+    "name": "Dedicated Fiber Leased Line (1 Gbps Symmetric)",
+    "category": "Telecom & Net",
+    "monthlyAmount": 950,
+    "vendor": "Airtel Business Telecom",
+    "frequency": "Monthly Invoice",
+    "autoPay": "Active Auto-Debit",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "EXP-FX-106",
+    "name": "South Mumbai Branch Lease",
+    "category": "Infrastructure",
+    "monthlyAmount": 9800,
+    "vendor": "Mumbai Commercial Spaces",
+    "frequency": "Monthly ACH",
+    "autoPay": "Active Auto-Debit",
+    "instituteCode": "beta"
+  }
+];
+
+export const SALARIES_PAYROLL_EXPENSES_DATA = [
+  {
+    "id": "SAL-101",
+    "roleDepartment": "Senior Physics Faculty (JEE Advanced)",
+    "staffCount": 3,
+    "baseSalaryMonthly": 12500,
+    "incentivesBonus": 1500,
+    "pfTaxDeduction": 1200,
+    "netPayrollMonthly": 12800,
+    "status": "Disbursed Direct Deposit",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "SAL-102",
+    "roleDepartment": "Organic & Physical Chemistry Faculty",
+    "staffCount": 2,
+    "baseSalaryMonthly": 8800,
+    "incentivesBonus": 900,
+    "pfTaxDeduction": 800,
+    "netPayrollMonthly": 8900,
+    "status": "Disbursed Direct Deposit",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "SAL-103",
+    "roleDepartment": "Mathematics & Olympiad Lecturers",
+    "staffCount": 3,
+    "baseSalaryMonthly": 11000,
+    "incentivesBonus": 1200,
+    "pfTaxDeduction": 1000,
+    "netPayrollMonthly": 11200,
+    "status": "Disbursed Direct Deposit",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "SAL-104",
+    "roleDepartment": "Academic Counselors & Student Support",
+    "staffCount": 4,
+    "baseSalaryMonthly": 5200,
+    "incentivesBonus": 600,
+    "pfTaxDeduction": 450,
+    "netPayrollMonthly": 5350,
+    "status": "Disbursed Direct Deposit",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "SAL-105",
+    "roleDepartment": "IT Systems, Hardware & Housekeeping Staff",
+    "staffCount": 5,
+    "baseSalaryMonthly": 4200,
+    "incentivesBonus": 300,
+    "pfTaxDeduction": 350,
+    "netPayrollMonthly": 4150,
+    "status": "Disbursed Direct Deposit",
+    "instituteCode": "alpha"
+  }
+];
+
+export const MANUAL_EXPENSES_DATA = [
+  {
+    "id": "MAN-EXP-201",
+    "date": "2026-09-15",
+    "category": "Printing & Materials",
+    "description": "Mock Test Booklet & OMR Sheet High-Speed Printing",
+    "amount": 1450,
+    "paymentMethod": "Corporate Card",
+    "paidBy": "Ramesh Sharma (Admin Mgr)",
+    "status": "Approved & Settled",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "MAN-EXP-202",
+    "date": "2026-09-12",
+    "category": "Lab & Consumables",
+    "description": "Physics Optical Bench Calibration & Lasers",
+    "amount": 850,
+    "paymentMethod": "Bank Transfer",
+    "paidBy": "Dr. K.V. Rao (HOD Physics)",
+    "status": "Approved & Settled",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "MAN-EXP-203",
+    "date": "2026-09-10",
+    "category": "Refreshments & Catering",
+    "description": "Parent-Teacher Meeting Snack Boxes & Coffee",
+    "amount": 620,
+    "paymentMethod": "UPI Direct",
+    "paidBy": "Meenakshi Sundaram",
+    "status": "Approved & Settled",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "MAN-EXP-204",
+    "date": "2026-09-08",
+    "category": "Repairs & Maintenance",
+    "description": "Emergency Plumbing Repair & Water Cooler Servicing",
+    "amount": 420,
+    "paymentMethod": "Cash Petty Expenses",
+    "paidBy": "Suresh Patil (Facilities)",
+    "status": "Approved & Settled",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "MAN-EXP-205",
+    "date": "2026-09-04",
+    "category": "Marketing & Branding",
+    "description": "Local City Bus Stop Banners & Pamphlet Distribution",
+    "amount": 2100,
+    "paymentMethod": "Corporate Card",
+    "paidBy": "Deepak Mehta (Marketing)",
+    "status": "Approved & Settled",
+    "instituteCode": "beta"
+  }
+];
+
+export const AUDIT_TRAIL_DATA = [
+  {
+    "id": "AUD-901",
+    "timestamp": "2026-09-19 02:24:18 PM",
+    "userName": "Dr. K.V. Rao",
+    "userRole": "HOD Physics",
+    "action": "Approved Fee Concession of $450 for STU-1002",
+    "ipAddress": "192.168.1.45",
+    "location": "Kota HQ Campus - Block A - Room 302",
+    "deviceInfo": "MacOS Sonoma • Chrome 128",
+    "riskLevel": "Sensitive Audit",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "AUD-902",
+    "timestamp": "2026-09-19 01:50:12 PM",
+    "userName": "Ramesh Sharma",
+    "userRole": "Academic Accountant",
+    "action": "Issued Fee Receipt #REC-8841 for $1,800 via UPI",
+    "ipAddress": "192.168.1.18",
+    "location": "Kota HQ Campus - Finance Counter #2",
+    "deviceInfo": "Windows 11 • Edge 125",
+    "riskLevel": "Normal",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "AUD-903",
+    "timestamp": "2026-09-19 12:14:05 PM",
+    "userName": "Meenakshi Sundaram",
+    "userRole": "Senior Counselor",
+    "action": "Scheduled AI PTM Call with Parent of Rohan Verma",
+    "ipAddress": "192.168.1.88",
+    "location": "Kota HQ Campus - Admissions Desk",
+    "deviceInfo": "Windows 11 • Chrome 128",
+    "riskLevel": "Normal",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "AUD-904",
+    "timestamp": "2026-09-19 11:42:30 AM",
+    "userName": "System Auto Guard",
+    "userRole": "AI Vision Engine",
+    "action": "Flagged Turnstile Photo Screen Fraud Attempt at Gate A",
+    "ipAddress": "10.0.4.102 (Edge Camera)",
+    "location": "Kota HQ Campus - Main Gate Turnstile #1",
+    "deviceInfo": "Linux Edge AI Node v4.2",
+    "riskLevel": "Security Alert",
+    "instituteCode": "alpha"
+  },
+  {
+    "id": "AUD-905",
+    "timestamp": "2026-09-19 10:15:22 AM",
+    "userName": "Deepak Mehta",
+    "userRole": "Branch Manager",
+    "action": "Updated Faculty Salary Payroll Disbursement Status",
+    "ipAddress": "103.22.41.12",
+    "location": "South Mumbai Branch - Admin Office",
+    "deviceInfo": "MacOS Sequoia • Safari 18",
+    "riskLevel": "Sensitive Audit",
+    "instituteCode": "beta"
+  }
+];
+
+export const WORK_ALLOTMENT_DATA = [
+  {
+    "id": "TASK-401",
+    "taskTitle": "Prepare Mechanics Unit Test 4 Question Paper & Solution Key",
+    "assignedTo": "Dr. K.V. Rao",
+    "assignedToRole": "Senior Physics Faculty",
+    "assignedToPhoto": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&auto=format&fit=crop&q=80",
+    "assignedBy": "Super Admin (Apex Management)",
+    "priority": "Urgent (24h)",
+    "dueDate": "2026-09-21",
+    "status": "In Progress",
+    "instituteCode": "alpha",
+    "description": "Please compile 30 JEE Advanced level Physics numericals with step-by-step derivational answer keys for batch Apex 2026.",
+    "conversationThread": [
+      {
+        "id": "CMT-1",
+        "sender": "Dr. K.V. Rao",
+        "role": "Assigned Faculty",
+        "time": "2026-09-19 11:30 AM",
+        "text": "Working on rotational dynamics section now. Will upload PDF draft by 5 PM today."
+      },
+      {
+        "id": "CMT-2",
+        "sender": "Super Admin",
+        "role": "Management",
+        "time": "2026-09-19 12:15 PM",
+        "text": "Great. Please ensure vector cross-product signs are explicitly highlighted in the solution key."
+      }
+    ]
+  },
+  {
+    "id": "TASK-402",
+    "taskTitle": "Verify Defaulter Fee Recovery Phone Calls for NEET Batch",
+    "assignedTo": "Meenakshi Sundaram",
+    "assignedToRole": "Academic Counselor",
+    "assignedToPhoto": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&auto=format&fit=crop&q=80",
+    "assignedBy": "Deepak Mehta (Branch Mgr)",
+    "priority": "High Priority",
+    "dueDate": "2026-09-20",
+    "status": "Pending Response",
+    "instituteCode": "alpha",
+    "description": "Call parents of 5 students in NEET Super 30 batch with 30+ days overdue installment.",
+    "conversationThread": [
+      {
+        "id": "CMT-101",
+        "sender": "Deepak Mehta",
+        "role": "Branch Manager",
+        "time": "2026-09-19 09:00 AM",
+        "text": "Call list pushed to your mobile CRM app. Please update status after calling."
+      }
+    ]
+  },
+  {
+    "id": "TASK-403",
+    "taskTitle": "Audit Chemistry Lab Reagents & Safety Glassware Stock",
+    "assignedTo": "Ramesh Sharma",
+    "assignedToRole": "Lab Incharge",
+    "assignedToPhoto": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80",
+    "assignedBy": "Super Admin",
+    "priority": "Normal",
+    "dueDate": "2026-09-22",
+    "status": "Completed & Verified",
+    "instituteCode": "alpha",
+    "description": "Conduct physical stock count of organic reagents and inspect fume hood exhaust fans.",
+    "conversationThread": [
+      {
+        "id": "CMT-201",
+        "sender": "Ramesh Sharma",
+        "role": "Lab Incharge",
+        "time": "2026-09-19 02:00 PM",
+        "text": "Completed stock count. Replaced 4 broken test tubes and refilled HCl solution. Audit log submitted."
+      }
+    ]
+  }
+];
+
+

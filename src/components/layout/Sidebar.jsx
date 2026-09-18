@@ -83,7 +83,9 @@ export const MODULE_DEFINITIONS = [
     title: 'Fees & Finance',
     icon: '💳',
     pages: [
-      { id: 'dashboard', label: 'Dashboard' },
+      { id: 'dashboard', label: 'Fees & Financial Control Hub' },
+      { id: 'batch_fee_discounts', label: 'Batch Fees & Student Discounts' },
+      { id: 'operating_expenses', label: 'Operating Expenses & Salaries' },
       { id: 'fee_ledger', label: 'Fee Ledger & Receipts' },
       { id: 'defaulters', label: 'Defaulter Recovery Desk' },
       { id: 'gst_invoicing', label: 'GST & Invoicing' },
@@ -291,6 +293,24 @@ export const MODULE_DEFINITIONS = [
       { id: 'rep_revenue_share', label: 'Gross Revenue Share Audit' },
       { id: 'rep_compliance_audit', label: 'Brand Standard Audits' },
     ]
+  },
+  {
+    id: '21_audit_trail',
+    title: 'Audit Trail & Activity Logs',
+    icon: '📜',
+    pages: [
+      { id: 'dashboard', label: 'Activity Logs & IP Telemetry' }
+    ],
+    reports: []
+  },
+  {
+    id: '22_work_allotment',
+    title: 'Work Allotment & Delegation',
+    icon: '📋',
+    pages: [
+      { id: 'dashboard', label: 'Task Allotment & Reply Threads' }
+    ],
+    reports: []
   }
 ];
 

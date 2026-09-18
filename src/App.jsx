@@ -28,6 +28,8 @@ import FacialReports from './modules/04_facial_attendance/Reports';
 
 // Module 05: Fees & Finance
 import FeesDashboard from './modules/05_fees_finance/Dashboard';
+import BatchFeesDiscounts from './modules/05_fees_finance/BatchFeesDiscounts';
+import OperatingExpenses from './modules/05_fees_finance/OperatingExpenses';
 import FeeLedgerReceipts from './modules/05_fees_finance/FeeLedgerReceipts';
 import DefaulterRecovery from './modules/05_fees_finance/DefaulterRecovery';
 import GSTTaxCompliance from './modules/05_fees_finance/GSTTaxCompliance';
@@ -113,6 +115,12 @@ import WhatsAppCrmDashboard from './modules/18_whatsapp_crm/Dashboard';
 // 20: Franchise & Multi-Branch Royalty
 import FranchiseRoyaltyDashboard from './modules/20_franchise_royalty/Dashboard';
 
+// 21: Audit Trail & Activity Logs
+import AuditTrailDashboard from './modules/21_audit_trail/Dashboard';
+
+// 22: Work Allotment & Task Delegation
+import WorkAllotmentDashboard from './modules/22_work_allotment/Dashboard';
+
 export default function App() {
   const [selectedInstitute, setSelectedInstitute] = useState('ALL');
   const [activeModule, setActiveModule] = useState('01_institutes_branches');
@@ -177,6 +185,8 @@ export default function App() {
 
       // 05: Fees & Finance
       case '05_fees_finance':
+        if (activePage === 'batch_fee_discounts') return <BatchFeesDiscounts instituteCode={selectedInstitute} />;
+        if (activePage === 'operating_expenses') return <OperatingExpenses instituteCode={selectedInstitute} />;
         if (activePage === 'fee_ledger') return <FeeLedgerReceipts instituteCode={selectedInstitute} />;
         if (activePage === 'defaulters') return <DefaulterRecovery instituteCode={selectedInstitute} />;
         if (activePage === 'gst_invoicing') return <GSTTaxCompliance instituteCode={selectedInstitute} />;
@@ -273,6 +283,14 @@ export default function App() {
       // 20: Franchise & Multi-Branch Royalty
       case '20_franchise_royalty':
         return <FranchiseRoyaltyDashboard instituteCode={selectedInstitute} />;
+
+      // 21: Audit Trail & Activity Logs
+      case '21_audit_trail':
+        return <AuditTrailDashboard instituteCode={selectedInstitute} />;
+
+      // 22: Work Allotment & Task Delegation
+      case '22_work_allotment':
+        return <WorkAllotmentDashboard instituteCode={selectedInstitute} />;
 
       default:
         return <InstitutesDashboard instituteCode={selectedInstitute} onNavigate={handleNavigate} />;
