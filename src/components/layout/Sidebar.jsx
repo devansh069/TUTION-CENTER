@@ -363,24 +363,24 @@ export default function Sidebar({
       <div className="h-16 px-4 border-b border-slate-100 flex items-center justify-between bg-white">
         {!sidebarCollapsed && (
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-black text-base shadow-sm">
-              Z
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-purple-600 text-white flex items-center justify-center font-black text-base shadow-sm">
+              E
             </div>
             <div>
               <div className="font-extrabold text-sm tracking-tight text-slate-900 flex items-center gap-1.5">
-                <span>ZENITH ERP</span>
-                <span className="text-[9px] uppercase font-black bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded border border-blue-200">
+                <span>EDUMISSION</span>
+                <span className="text-[9px] uppercase font-black bg-indigo-50 text-indigo-700 px-1.5 py-0.5 rounded border border-indigo-200">
                   Super Admin
                 </span>
               </div>
-              <div className="text-[10px] text-slate-600 font-medium">Multi-Tenant Academy Cloud</div>
+              <div className="text-[10px] text-slate-600 font-medium">EduMission Tuition Center Cloud</div>
             </div>
           </div>
         )}
 
         {sidebarCollapsed && (
-          <div className="mx-auto w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-black text-base shadow-sm">
-            Z
+          <div className="mx-auto w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-purple-600 text-white flex items-center justify-center font-black text-base shadow-sm">
+            E
           </div>
         )}
 
@@ -538,7 +538,7 @@ export default function Sidebar({
         })}
       </div>
 
-      {/* User Footer (Matching Reference Screenshot 1 & 2) */}
+      {/* User Footer */}
       <div className="p-3 border-t border-slate-100 bg-slate-50/70">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2.5 min-w-0">
@@ -547,7 +547,7 @@ export default function Sidebar({
             </div>
             {!sidebarCollapsed && (
               <div className="min-w-0">
-                <div className="text-xs font-bold text-slate-900 truncate">Zenith Super Admin</div>
+                <div className="text-xs font-bold text-slate-900 truncate">EduMission Super Admin</div>
                 <div className="text-[10px] text-emerald-600 font-semibold flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                   Multi-Tenant Root

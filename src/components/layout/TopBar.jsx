@@ -1,5 +1,6 @@
 import React from 'react';
 import { MOCK_TUITION_CENTERS } from '../../data/erpData';
+import { Bell, Settings, User } from 'lucide-react';
 
 export default function TopBar({
   selectedInstitute,
@@ -7,23 +8,33 @@ export default function TopBar({
   activeModuleTitle,
   activePageTitle,
   sidebarCollapsed,
+  userRole = 'Super Admin'
 }) {
   return (
     <header className="h-16 bg-white border-b border-slate-200/80 sticky top-0 z-20 px-4 md:px-6 flex items-center justify-between shadow-[0_1px_3px_rgba(0,0,0,0.02)]">
-      {/* Left section */}
-      <div className="flex items-center gap-3"></div>
-
-      {/* Center/Right: Multi-Tenant Institute Selector & Controls */}
+      {/* Left section: Welcome message */}
       <div className="flex items-center gap-3">
-        {/* Multi-Tenant Scope Selector */}
-        <div className="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-xl px-3 py-1.5 shadow-sm">
-          <span className="text-xs font-semibold text-slate-500 hidden sm:inline">Tuition Center:</span>
+        <div className="flex flex-col">
+          <div className="text-xs text-slate-500 font-medium">EduMission Tuition Center</div>
+          <div className="text-sm font-black text-slate-900 tracking-tight flex items-center gap-1.5">
+            <span>Welcome back,</span>
+            <span className="text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-md border border-indigo-100 font-black">
+              {userRole}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Center: Tuition Center / College Selector Dropdown */}
+      <div className="flex items-center justify-center">
+        <div className="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-1.5 shadow-2xs">
+          <span className="text-xs font-bold text-slate-500 hidden sm:inline">Tuition Center:</span>
           <select
             value={selectedInstitute}
             onChange={(e) => setSelectedInstitute(e.target.value)}
             className="bg-transparent text-xs font-bold text-slate-800 focus:outline-none cursor-pointer pr-2"
           >
-            <option value="ALL">🌐 All Institutes (Enterprise Super Admin)</option>
+            <option value="ALL">🌐 All Institutes (EduMission Super Admin)</option>
             {MOCK_TUITION_CENTERS.map((c) => (
               <option key={c.id} value={c.id}>
                 📍 {c.name} ({c.city})
@@ -31,26 +42,26 @@ export default function TopBar({
             ))}
           </select>
         </div>
+      </div>
 
+      {/* Right section: Notifications, Settings & User Profile */}
+      <div className="flex items-center gap-2 sm:gap-3">
         {/* Global Notifications */}
         <button
           className="relative w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 hover:bg-slate-100 flex items-center justify-center text-slate-600 transition"
           title="Notifications & Alerts"
         >
-          <span>🔔</span>
+          <Bell className="w-4 h-4 text-slate-700" />
           <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-rose-500"></span>
         </button>
 
-        {/* Super Admin Avatar Badge */}
-        <div className="flex items-center gap-2 pl-2 border-l border-slate-200">
-          <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold text-xs shadow-sm">
-            SA
-          </div>
-          <div className="hidden sm:block text-left">
-            <div className="text-xs font-black text-slate-800 leading-tight">Super Admin</div>
-            <div className="text-[10px] text-emerald-600 font-semibold leading-tight">Master Privileges</div>
-          </div>
-        </div>
+        {/* Global Settings */}
+        <button
+          className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 hover:bg-slate-100 flex items-center justify-center text-slate-600 transition"
+          title="System Settings"
+        >
+          <Settings className="w-4 h-4 text-slate-700" />
+        </button>
       </div>
     </header>
   );
