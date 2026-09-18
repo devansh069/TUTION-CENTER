@@ -50,13 +50,15 @@ export const MODULE_DEFINITIONS = [
     title: 'Facial Check-in & Attendance',
     icon: '📸',
     pages: [
-      { id: 'dashboard', label: 'Dashboard' },
+      { id: 'dashboard', label: 'Dashboard & Matrix' },
       { id: 'live_stream', label: 'Live Biometric Stream' },
       { id: 'late_anomalies', label: 'Late & Absent Anomalies' },
     ],
     reports: [
-      { id: 'rep_biometric', label: 'Biometric Audit Log' },
-      { id: 'rep_punctuality', label: 'Punctuality Analysis' },
+      { id: 'rep_late_comers', label: 'Late Comers & Violations' },
+      { id: 'rep_punctuality', label: 'Punctuality & Honor Roll' },
+      { id: 'rep_faculty_leave', label: 'Faculty Leaves & Pay Cuts' },
+      { id: 'rep_biometric', label: 'Biometric Hardware Audit' },
     ]
   },
   {
