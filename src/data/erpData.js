@@ -10596,12 +10596,121 @@ export const LATE_COMERS_ANOMALIES_DATA = [
 ];
 
 export const INVENTORY_DATA = [
-  { id: 'INV-101', itemCode: 'BK-JEE-PHY', name: 'JEE Advanced Physics Modules Vol 1-4', instituteCode: 'alpha', category: 'Study Material', inStock: 450, minRequired: 100, unitCost: 45, reorderStatus: 'Sufficient Stock', supplier: 'Pearson Academic Press' },
-  { id: 'INV-102', itemCode: 'BK-NEET-BIO', name: 'NEET Comprehensive Biology Question Bank', instituteCode: 'alpha', category: 'Study Material', inStock: 280, minRequired: 80, unitCost: 38, reorderStatus: 'Sufficient Stock', supplier: 'McGraw Hill Ed' },
-  { id: 'INV-103', itemCode: 'UNIF-BLAZ-L', name: 'Alpha Institute Crest Blazer (L)', instituteCode: 'alpha', category: 'Uniform Kits', inStock: 42, minRequired: 50, unitCost: 32, reorderStatus: 'Low Stock Alert', supplier: 'Apparel Corp USA' },
-  { id: 'INV-201', itemCode: 'BK-CA-LAW', name: 'Corporate & Economic Laws Statutory Handbook', instituteCode: 'beta', category: 'Study Material', inStock: 180, minRequired: 50, unitCost: 55, reorderStatus: 'Sufficient Stock', supplier: 'Taxmann Publishers' },
-  { id: 'INV-301', itemCode: 'KIT-MED-DIS', name: 'Pre-Med Anatomical Model & Dissection Kits', instituteCode: 'apex', category: 'Lab Kits', inStock: 15, minRequired: 30, unitCost: 110, reorderStatus: 'Reorder Placed', supplier: 'BioMed Scientific' },
-  { id: 'INV-401', itemCode: 'ROB-ARD-KIT', name: 'Arduino Robotics & Microcontroller Starter Kit', instituteCode: 'delta', category: 'Hardware Kits', inStock: 60, minRequired: 20, unitCost: 75, reorderStatus: 'Sufficient Stock', supplier: 'SparkFun Electronics' }
+  // 1. BATCH-WISE BOOK SETS
+  { 
+    id: 'INV-BK-101', 
+    itemCode: 'BS-JEE-2026', 
+    name: 'JEE Advanced 2026 Master Book Set (18 Vol Pack)', 
+    batch: 'Batch A - JEE 2026', 
+    instituteCode: 'alpha', 
+    category: 'Batch Book Set', 
+    inStock: 340, 
+    minRequired: 50, 
+    unitCost: 120, 
+    reorderStatus: 'Sufficient Stock', 
+    supplier: 'EduMission Academic Publications',
+    includes: ['Physics Vol 1-6', 'Chemistry Vol 1-6', 'Maths Vol 1-6', 'PYQ Workbook'],
+    assignedStudents: 110,
+    pendingDispatch: 5
+  },
+  { 
+    id: 'INV-BK-102', 
+    itemCode: 'BS-NEET-2026', 
+    name: 'NEET UG 2026 Complete Bio & Chem Module Pack', 
+    batch: 'Batch B - NEET 2026', 
+    instituteCode: 'alpha', 
+    category: 'Batch Book Set', 
+    inStock: 210, 
+    minRequired: 60, 
+    unitCost: 95, 
+    reorderStatus: 'Sufficient Stock', 
+    supplier: 'Pearson Bio Press',
+    includes: ['NCERT Bio Line-by-Line', 'Organic Chem Mastery', 'Physics Practice Cards'],
+    assignedStudents: 85,
+    pendingDispatch: 3
+  },
+  { 
+    id: 'INV-BK-103', 
+    itemCode: 'BS-CA-2026', 
+    name: 'CA Foundation 4-Subject Statutory Modules', 
+    batch: 'Batch C - CA Foundation', 
+    instituteCode: 'beta', 
+    category: 'Batch Book Set', 
+    inStock: 45, 
+    minRequired: 50, 
+    unitCost: 140, 
+    reorderStatus: 'Low Stock Alert', 
+    supplier: 'Taxmann Publishers & ICAI',
+    includes: ['Accounting Principles', 'Business Laws', 'Quantitative Aptitude', 'Eco Digest'],
+    assignedStudents: 42,
+    pendingDispatch: 8
+  },
+  { 
+    id: 'INV-BK-104', 
+    itemCode: 'BS-FND-10TH', 
+    name: 'Class 10th Board & Olympiad Sprint Bundle', 
+    batch: 'Batch D - Foundation 10th', 
+    instituteCode: 'alpha', 
+    category: 'Batch Book Set', 
+    inStock: 180, 
+    minRequired: 40, 
+    unitCost: 65, 
+    reorderStatus: 'Sufficient Stock', 
+    supplier: 'McGraw Hill School Division',
+    includes: ['Science Exemplar', 'Maths Practice Bank', 'Social Notes', 'Mental Ability'],
+    assignedStudents: 60,
+    pendingDispatch: 2
+  },
+
+  // 2. WELCOME KITS & STARTER BUNDLES
+  { 
+    id: 'INV-KIT-201', 
+    itemCode: 'KIT-STU-PREM', 
+    name: 'Premium Student Admission Welcome Kit', 
+    batch: 'All Enrolled Students', 
+    instituteCode: 'alpha', 
+    category: 'Welcome Kit', 
+    inStock: 125, 
+    minRequired: 40, 
+    unitCost: 45, 
+    reorderStatus: 'Sufficient Stock', 
+    supplier: 'Campus Brand Merchandisers',
+    includes: ['Institute Backpack', 'RFID Student ID Card & Lanyard', 'Stainless Steel Water Bottle', '2026 Academic Planner', 'Custom Pen Set'],
+    assignedStudents: 290,
+    pendingDispatch: 12
+  },
+  { 
+    id: 'INV-KIT-202', 
+    itemCode: 'KIT-STU-STD', 
+    name: 'Standard Scholar Admission Welcome Kit', 
+    batch: 'Foundation & Crash Courses', 
+    instituteCode: 'alpha', 
+    category: 'Welcome Kit', 
+    inStock: 35, 
+    minRequired: 50, 
+    unitCost: 28, 
+    reorderStatus: 'Low Stock Alert', 
+    supplier: 'Campus Brand Merchandisers',
+    includes: ['Canvas Tote Bag', 'Student ID Card & Lanyard', 'Spiral Subject Notebook', 'EduMission Gel Pen Set'],
+    assignedStudents: 140,
+    pendingDispatch: 15
+  },
+  { 
+    id: 'INV-KIT-203', 
+    itemCode: 'KIT-FAC-PRO', 
+    name: 'Faculty & Educator Starter Welcome Kit', 
+    batch: 'New Teaching Staff', 
+    instituteCode: 'alpha', 
+    category: 'Welcome Kit', 
+    inStock: 25, 
+    minRequired: 10, 
+    unitCost: 85, 
+    reorderStatus: 'Sufficient Stock', 
+    supplier: 'Executive Supplies Corp',
+    includes: ['Leather Educator Bag', 'Wireless Presentation Laser Pointer', 'Whiteboard Marker Box', 'Faculty RFID Badge', 'Hardbound Diary'],
+    assignedStudents: 18,
+    pendingDispatch: 1
+  }
 ];
 
 export const HELP_SUPPORT_DATA = [
