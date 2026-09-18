@@ -11786,5 +11786,187 @@ export const EXAM_SERIES_DATA = [
   }
 ];
 
+export const BATCH_SUBJECTS_TEACHERS_DATA = [
+  {
+    id: 'BST-101',
+    batch: 'Batch A - JEE 2026',
+    instituteCode: 'alpha',
+    subject: 'Advanced Physics (Mechanics & EM)',
+    onlineTeacher: {
+      id: 'TCH-ON-101',
+      name: 'Dr. Harrison Wells',
+      photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80',
+      rating: 4.9,
+      aiScore: 94.8,
+      status: 'Optimal Performance',
+      transcriptionQuality: 'Excellent concept breakdown and pace'
+    },
+    offlineTeacher: {
+      id: 'TCH-OFF-101',
+      name: 'Prof. Rajesh Gupta',
+      photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80',
+      rating: 4.8,
+      aiScore: 92.5,
+      status: 'Optimal Performance',
+      transcriptionQuality: 'High interactive doubt solving'
+    },
+    replacementRecommended: false,
+    backupTeacher: 'Dr. Elena Vasquez (Backup Faculty)'
+  },
+  {
+    id: 'BST-102',
+    batch: 'Batch A - JEE 2026',
+    instituteCode: 'alpha',
+    subject: 'Organic & Inorganic Chemistry',
+    onlineTeacher: {
+      id: 'TCH-ON-102',
+      name: 'Prof. Ananya Roy',
+      photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&auto=format&fit=crop&q=80',
+      rating: 4.8,
+      aiScore: 93.2,
+      status: 'Optimal Performance',
+      transcriptionQuality: 'Clear step-by-step mechanism explanation'
+    },
+    offlineTeacher: {
+      id: 'TCH-OFF-102',
+      name: 'Dr. Vikram Sengupta',
+      photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&auto=format&fit=crop&q=80',
+      rating: 3.4,
+      aiScore: 64.0,
+      status: 'Low Feedback Alert',
+      transcriptionQuality: 'Transcript Analysis: Monotone delivery, 4 missed student doubts'
+    },
+    replacementRecommended: true,
+    backupTeacher: 'Pooja Kashyap, M.Sc (Senior Organic Chemist)'
+  },
+  {
+    id: 'BST-103',
+    batch: 'Batch B - NEET 2026',
+    instituteCode: 'alpha',
+    subject: 'Zoology & Human Physiology',
+    onlineTeacher: {
+      id: 'TCH-ON-103',
+      name: 'Dr. Emily Vance',
+      photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&auto=format&fit=crop&q=80',
+      rating: 4.9,
+      aiScore: 96.5,
+      status: 'Top Rated Faculty',
+      transcriptionQuality: 'Exceptional diagrammatic & NCERT line recall'
+    },
+    offlineTeacher: {
+      id: 'TCH-OFF-103',
+      name: 'Dr. Alistair Sterling',
+      photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&auto=format&fit=crop&q=80',
+      rating: 4.7,
+      aiScore: 90.4,
+      status: 'Optimal Performance',
+      transcriptionQuality: 'Good physical lab model integration'
+    },
+    replacementRecommended: false,
+    backupTeacher: 'Dr. Nancy Drew (Senior Pre-Med Lead)'
+  },
+  {
+    id: 'BST-104',
+    batch: 'Batch C - CA Foundation',
+    instituteCode: 'beta',
+    subject: 'Financial Audit & Corporate Law',
+    onlineTeacher: {
+      id: 'TCH-ON-104',
+      name: 'Catherine Miller, FCA',
+      photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&auto=format&fit=crop&q=80',
+      rating: 4.9,
+      aiScore: 95.8,
+      status: 'Top Rated Faculty',
+      transcriptionQuality: 'Real-world case law analysis & exam strategy'
+    },
+    offlineTeacher: {
+      id: 'TCH-OFF-104',
+      name: 'Adv. David Ross',
+      photo: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=120&auto=format&fit=crop&q=80',
+      rating: 4.6,
+      aiScore: 88.0,
+      status: 'Optimal Performance',
+      transcriptionQuality: 'Solid statutory clause breakdown'
+    },
+    replacementRecommended: false,
+    backupTeacher: 'Marcus Wright, FCA (Corporate Lead)'
+  }
+];
+
+export const LIVE_CLASSES_SCHEDULE_DATA = [
+  {
+    id: 'LIV-101',
+    title: 'Electromagnetic Induction & Faraday Laws',
+    batch: 'Batch A - JEE 2026',
+    subject: 'Advanced Physics',
+    onlineTeacher: 'Dr. Harrison Wells',
+    scheduleTime: 'Today, 10:00 AM - 11:30 AM',
+    status: 'Live Now',
+    viewersJoined: 112,
+    totalEnrolled: 118,
+    attendanceRate: 94.9,
+    bitrate: '4.8 Mbps 1080p 60fps',
+    serverNode: 'WebRTC US-East Node 1',
+    instituteCode: 'alpha',
+    aiScore: 95.4,
+    liveTranscript: [
+      { timestamp: '10:02 AM', speaker: 'Dr. Harrison Wells', text: "Welcome everyone! Today we will derive Lenz's Law and calculate induced EMF in a moving conductor loop." },
+      { timestamp: '10:07 AM', speaker: 'Dr. Harrison Wells', text: "Remember, the induced magnetic field always opposes the change in magnetic flux passing through the loop surface." },
+      { timestamp: '10:14 AM', speaker: 'Student Question (Aarav)', text: "Sir, what happens if the loop resistance is zero in a superconductor?" },
+      { timestamp: '10:15 AM', speaker: 'Dr. Harrison Wells', text: "Great question Aarav! In a superconductor, induced current flows endlessly to maintain zero flux change inside." }
+    ],
+    studentsInMeet: [
+      { id: 'STU-1001', name: 'Aarav Sharma', batch: 'Batch A - JEE 2026', attendance: 'Joined 10:00 AM', status: 'Active (Mic Open)', engagementScore: '98%', handRaised: true },
+      { id: 'STU-1002', name: 'Ananya Patel', batch: 'Batch A - JEE 2026', attendance: 'Joined 10:01 AM', status: 'Active (Listening)', engagementScore: '96%', handRaised: false },
+      { id: 'STU-1003', name: 'Rohan Verma', batch: 'Batch A - JEE 2026', attendance: 'Joined 10:03 AM', status: 'Active (Camera On)', engagementScore: '94%', handRaised: false },
+      { id: 'STU-1004', name: 'Neha Gupta', batch: 'Batch A - JEE 2026', attendance: 'Joined 10:00 AM', status: 'Active (Notes Taking)', engagementScore: '97%', handRaised: false },
+      { id: 'STU-1005', name: 'Kabir Mehta', batch: 'Batch A - JEE 2026', attendance: 'Joined 10:05 AM', status: 'Idle', engagementScore: '82%', handRaised: false }
+    ]
+  },
+  {
+    id: 'LIV-102',
+    title: 'Reaction Mechanism & Nucleophilic Substitution (SN1 vs SN2)',
+    batch: 'Batch B - NEET 2026',
+    subject: 'Organic Chemistry',
+    onlineTeacher: 'Prof. Ananya Roy',
+    scheduleTime: 'Today, 11:30 AM - 01:00 PM',
+    status: 'Live Now',
+    viewersJoined: 82,
+    totalEnrolled: 85,
+    attendanceRate: 96.5,
+    bitrate: '4.2 Mbps 1080p 30fps',
+    serverNode: 'WebRTC Asia-South Node 2',
+    instituteCode: 'alpha',
+    aiScore: 93.8,
+    liveTranscript: [
+      { timestamp: '11:32 AM', speaker: 'Prof. Ananya Roy', text: "Pay close attention to carbocation stability in SN1 reactions vs backside attack inversion in SN2." },
+      { timestamp: '11:40 AM', speaker: 'Student Question (Priya)', text: "Ma'am, does polar aprotic solvent favor SN2 mechanism?" },
+      { timestamp: '11:41 AM', speaker: 'Prof. Ananya Roy', text: "Yes Priya! Polar aprotic solvents do not solvate nucleophiles, increasing their reactivity dramatically." }
+    ],
+    studentsInMeet: [
+      { id: 'STU-2001', name: 'Priya Patel', batch: 'Batch B - NEET 2026', attendance: 'Joined 11:30 AM', status: 'Active (Asking Doubt)', engagementScore: '99%', handRaised: true },
+      { id: 'STU-2002', name: 'Siddharth Nair', batch: 'Batch B - NEET 2026', attendance: 'Joined 11:31 AM', status: 'Active (Listening)', engagementScore: '95%', handRaised: false }
+    ]
+  },
+  {
+    id: 'LIV-103',
+    title: 'CA Inter Corporate Restructuring & Insolvency Laws',
+    batch: 'Batch C - CA Foundation',
+    subject: 'Corporate Law',
+    onlineTeacher: 'Catherine Miller, FCA',
+    scheduleTime: 'Today, 02:00 PM - 03:30 PM',
+    status: 'Today Upcoming',
+    viewersJoined: 0,
+    totalEnrolled: 45,
+    attendanceRate: 0,
+    bitrate: 'Stream Scheduled',
+    serverNode: 'WebRTC EU-West Node 1',
+    instituteCode: 'beta',
+    aiScore: 96.0,
+    liveTranscript: [],
+    studentsInMeet: []
+  }
+];
+
 
 

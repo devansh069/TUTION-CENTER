@@ -1,51 +1,66 @@
-import React, { useState } from 'react';
-import { MOCK_FACULTY } from '../../data/erpData';
+import React from 'react';
+import { BookOpen, Users, Video, Star, Sparkles, CheckCircle2, Zap } from 'lucide-react';
+import { BATCH_SUBJECTS_TEACHERS_DATA } from '../../data/erpData';
 
-export default function SubjectAllocationMatrix({ instituteCode }) {
+export default function SubjectAllocationMatrix() {
   return (
-    <div className="space-y-6">
-      <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-          <div>
-            <h2 className="text-lg font-black text-slate-800">Faculty-Subject Mapping Matrix</h2>
-            <p className="text-xs text-slate-500">Cross-center faculty deployment, specialization topics and lecture delivery allocations</p>
-          </div>
-          <button className="px-4 py-2 bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-700 transition flex items-center gap-1.5 shadow-sm">
-            <span>+</span> Assign New Subject Slot
-          </button>
-        </div>
+    <div className="space-y-6 animate-in fade-in duration-200">
+      <div className="pb-3 border-b border-slate-200">
+        <h1 className="font-heading text-2xl font-extrabold text-slate-900 flex items-center">
+          <BookOpen className="w-6 h-6 mr-2 text-indigo-600" /> Subject Allocation Matrix & Faculty Mapping
+        </h1>
+        <p className="text-xs text-slate-500 mt-0.5">
+          Dual educator mapping matrix (1 Online Masterclass Educator + 1 Offline Classroom Educator) for every subject.
+        </p>
+      </div>
 
+      <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs">
         <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs">
-            <thead className="bg-slate-50/80 text-slate-500 font-semibold border-b border-slate-200 uppercase tracking-wider">
-              <tr>
-                <th className="py-3 px-4">Faculty Member</th>
-                <th className="py-3 px-4">Primary Specialization</th>
-                <th className="py-3 px-4">Designation</th>
-                <th className="py-3 px-4">Base Branch</th>
-                <th className="py-3 px-4">Current Batches Assigned</th>
-                <th className="py-3 px-4 text-right">Student Rating</th>
+          <table className="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr className="bg-slate-50 text-slate-500 uppercase font-bold text-[11px] border-b border-slate-200">
+                <th className="p-3">Target Batch</th>
+                <th className="p-3">Subject Title</th>
+                <th className="p-3">Online Educator</th>
+                <th className="p-3">AI Speech Score</th>
+                <th className="p-3">Offline Educator</th>
+                <th className="p-3">AI Speech Score</th>
+                <th className="p-3 text-right">Allocation Status</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
-              {MOCK_FACULTY.map((f) => (
-                <tr key={f.id} className="hover:bg-slate-50/60 transition">
-                  <td className="py-3 px-4">
-                    <div className="font-bold text-slate-800">{f.name}</div>
-                    <div className="text-[11px] text-slate-400 font-mono">{f.id} • {f.qualification}</div>
+              {BATCH_SUBJECTS_TEACHERS_DATA.map((item) => (
+                <tr key={item.id} className="hover:bg-slate-50 transition-colors">
+                  <td className="p-3 font-bold text-slate-900">{item.batch}</td>
+                  <td className="p-3 font-bold text-indigo-600">{item.subject}</td>
+                  <td className="p-3">
+                    <div className="flex items-center gap-2">
+                      <img src={item.onlineTeacher.photo} alt={item.onlineTeacher.name} className="w-7 h-7 rounded-full object-cover border" />
+                      <span className="font-bold text-slate-800">{item.onlineTeacher.name}</span>
+                    </div>
                   </td>
-                  <td className="py-3 px-4">
-                    <span className="px-2.5 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded font-bold text-[11px]">
-                      {f.subject}
+                  <td className="p-3 font-mono font-bold text-emerald-600">{item.onlineTeacher.aiScore}%</td>
+                  <td className="p-3">
+                    <div className="flex items-center gap-2">
+                      <img src={item.offlineTeacher.photo} alt={item.offlineTeacher.name} className="w-7 h-7 rounded-full object-cover border" />
+                      <span className="font-bold text-slate-800">{item.offlineTeacher.name}</span>
+                    </div>
+                  </td>
+                  <td className="p-3 font-mono font-bold text-slate-800">
+                    <span className={item.offlineTeacher.aiScore < 70 ? 'text-rose-600 font-extrabold' : 'text-emerald-600'}>
+                      {item.offlineTeacher.aiScore}%
                     </span>
                   </td>
-                  <td className="py-3 px-4 font-medium text-slate-700">{f.designation}</td>
-                  <td className="py-3 px-4 font-semibold text-slate-600">{f.center}</td>
-                  <td className="py-3 px-4 text-slate-800 font-medium">3 Batches (JEE-Adv 2026, 2027)</td>
-                  <td className="py-3 px-4 text-right">
-                    <span className="px-2.5 py-0.5 bg-amber-50 text-amber-700 border border-amber-200 rounded-full font-bold text-[10px]">
-                      ⭐ {f.rating} / 5.0
-                    </span>
+                  <td className="p-3 text-right">
+                    {item.offlineTeacher.aiScore < 70 ? (
+                      <span className="px-2.5 py-1 rounded bg-rose-100 text-rose-800 font-bold text-[10px]">
+                        Replacement Needed
+                      </span>
+                    ) : (
+                      <span className="px-2.5 py-1 rounded bg-emerald-100 text-emerald-800 font-bold text-[10px]">
+                        Optimal Mapping
+                      </span>
+                    )}
                   </td>
                 </tr>
               ))}
