@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import Sidebar, { MODULE_DEFINITIONS } from './components/layout/Sidebar';
 import TopBar from './components/layout/TopBar';
 import GuidedDashboardTour from './components/common/GuidedDashboardTour';
+import AIChatWidget from './components/common/AIChatWidget';
 
 // Module 01: Institutes & Branches
 import InstitutesDashboard from './modules/01_institutes_branches/Dashboard';
@@ -440,6 +441,9 @@ export default function App() {
             setActivePage(pgId);
           }}
         />
+
+        {/* Global Floating AI Assistant Chat Widget */}
+        <AIChatWidget />
       </div>
     </div>
   );
