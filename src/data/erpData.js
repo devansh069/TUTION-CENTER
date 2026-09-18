@@ -10658,3 +10658,378 @@ export const MOCK_SUBJECTS = [
   { id: 'SUB-04', name: 'Zoology & Human Physiology', target: 'NEET Medical Star', hod: 'Dr. Emily Vance', batches: 6, hoursPerWeek: 24 },
   { id: 'SUB-05', name: 'Auditing & Corporate Laws', target: 'CA Foundation / Inter', hod: 'Catherine Miller, FCA', batches: 5, hoursPerWeek: 22 },
 ];
+
+
+
+// ==========================================
+// AI SUITE & NEW ENTERPRISE MODULES DATA
+// ==========================================
+
+export const AI_DROPOUT_PREDICTOR_DATA = [
+  {
+    "studentId": "STU-1003",
+    "studentName": "Rohan Verma",
+    "batchName": "Foundation Olympiad",
+    "instituteCode": "alpha",
+    "instituteName": "Alpha Institute of Science",
+    "dropoutRisk": 78,
+    "riskLevel": "Critical Risk",
+    "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+    "attendanceDrop": "-14.2% in last 3 weeks (Current: 84%)",
+    "homeworkDelayRate": "3 Consecutive Delayed Submissions",
+    "testPercentileDecay": "Physics Mechanics down 35% (Current: 42nd Percentile)",
+    "primaryRootCauses": [
+      "Rotational Mechanics concepts gap",
+      "Frequent Monday absenteeism (3 consecutive weeks)",
+      "Unresolved parent PTM feedback"
+    ],
+    "aiRecommendation": "Schedule urgent 1-on-1 counselor intervention and deploy Foundation Mechanics remedial module.",
+    "parentName": "Vikram Verma",
+    "parentPhone": "+91 98450 11298",
+    "interventionStatus": "Intervention Required"
+  },
+  {
+    "studentId": "STU-5001",
+    "studentName": "Chloe Dubois",
+    "batchName": "CLAT Super 40",
+    "instituteCode": "zenith",
+    "instituteName": "Zenith Law & Humanities",
+    "dropoutRisk": 64,
+    "riskLevel": "High Risk",
+    "photo": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80",
+    "attendanceDrop": "-8.5% in last month (Current: 88.5%)",
+    "homeworkDelayRate": "2 Missing Legal Reasoning Assignments",
+    "testPercentileDecay": "Legal Aptitude dropped from 88th to 61st Percentile",
+    "primaryRootCauses": [
+      "Time management struggle in mock sectionals",
+      "Inter-city travel fatigue"
+    ],
+    "aiRecommendation": "Provide CLAT Sectional Time-Optimizer kit and assign Peer Mentor.",
+    "parentName": "Marc Dubois",
+    "parentPhone": "+33 1 42 68 55 01",
+    "interventionStatus": "Counselor PTM Booked"
+  },
+  {
+    "studentId": "STU-2002",
+    "studentName": "Liam Davies",
+    "batchName": "Taxation Fast-Track",
+    "instituteCode": "beta",
+    "instituteName": "Beta Institute of Commerce",
+    "dropoutRisk": 52,
+    "riskLevel": "Moderate Risk",
+    "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+    "attendanceDrop": "-5.0% (Current: 91.4%)",
+    "homeworkDelayRate": "1 Delayed GST Numerical Problem Set",
+    "testPercentileDecay": "Corporate Tax dropped by 15%",
+    "primaryRootCauses": [
+      "Late morning arrival on transit days",
+      "Struggle in GST Input Tax Credit calculations"
+    ],
+    "aiRecommendation": "Assign CA Fast-Track tutorial hours and send digital GST workbook.",
+    "parentName": "Gareth Davies",
+    "parentPhone": "+44 7700 900880",
+    "interventionStatus": "Monitoring"
+  },
+  {
+    "studentId": "STU-1002",
+    "studentName": "Ananya Deshmukh",
+    "batchName": "NEET Super-60 Batch A",
+    "instituteCode": "alpha",
+    "instituteName": "Alpha Institute of Science",
+    "dropoutRisk": 12,
+    "riskLevel": "Low Risk (Top Performer)",
+    "photo": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=80",
+    "attendanceDrop": "Stable (+1.2% Attendance: 96.5%)",
+    "homeworkDelayRate": "0 Delays (100% On-Time)",
+    "testPercentileDecay": "Botany 99th Percentile, Zoology 97th Percentile",
+    "primaryRootCauses": [
+      "No academic risk detected"
+    ],
+    "aiRecommendation": "Recommend for NEET National Ranker Elite Test Series.",
+    "parentName": "Dr. Sunita Deshmukh",
+    "parentPhone": "+91 97110 88230",
+    "interventionStatus": "On Track"
+  }
+];
+export const AI_OCR_SUBMISSIONS_DATA = [
+  {
+    "id": "HW-OCR-301",
+    "studentName": "Aarav Sharma",
+    "studentId": "STU-1001",
+    "batchName": "JEE Advanced Pinnacle",
+    "subject": "Advanced Physics",
+    "topic": "Rotational Motion & Inertia Tensor",
+    "instituteCode": "alpha",
+    "submittedTime": "Yesterday 11:20 PM",
+    "uploadedScan": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&auto=format&fit=crop&q=80",
+    "aiGradedScore": 18,
+    "maxScore": 20,
+    "aiGradePercentage": 90,
+    "ocrStatus": "Graded via Vision AI v4.2",
+    "stepsAudit": [
+      {
+        "stepNo": 1,
+        "description": "Free Body Diagram & Angular Speed Setup",
+        "status": "Correct",
+        "points": 5
+      },
+      {
+        "stepNo": 2,
+        "description": "Integration over Cylinder Radius",
+        "status": "Correct",
+        "points": 5
+      },
+      {
+        "stepNo": 3,
+        "description": "Torque Cross-Product Direction Calculation",
+        "status": "Minor Error in Vector Sign",
+        "points": 3,
+        "errorHighlight": "Used -k instead of +k in step 3"
+      },
+      {
+        "stepNo": 4,
+        "description": "Final Numerical Answer in SI Units",
+        "status": "Correct",
+        "points": 5
+      }
+    ],
+    "aiFeedback": "Excellent mathematical clarity. Minor minus sign error in step 3 vector product, partial marks awarded."
+  },
+  {
+    "id": "HW-OCR-302",
+    "studentName": "Rohan Verma",
+    "studentId": "STU-1003",
+    "batchName": "Foundation Olympiad",
+    "subject": "Pure Mathematics",
+    "topic": "Quadratic Equations & Complex Roots",
+    "instituteCode": "alpha",
+    "submittedTime": "Today 07:45 AM",
+    "uploadedScan": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600&auto=format&fit=crop&q=80",
+    "aiGradedScore": 11,
+    "maxScore": 20,
+    "aiGradePercentage": 55,
+    "ocrStatus": "Graded via Vision AI v4.2",
+    "stepsAudit": [
+      {
+        "stepNo": 1,
+        "description": "Discriminant Calculation b^2 - 4ac",
+        "status": "Correct",
+        "points": 5
+      },
+      {
+        "stepNo": 2,
+        "description": "Factoring Complex Expression",
+        "status": "Algebraic Mistake",
+        "points": 2,
+        "errorHighlight": "Substituted +4 instead of -4 in denominator"
+      },
+      {
+        "stepNo": 3,
+        "description": "Root Verification in Modulus-Argument Form",
+        "status": "Incomplete Step",
+        "points": 4,
+        "errorHighlight": "Calculation stopped midway"
+      }
+    ],
+    "aiFeedback": "Incomplete derivation. Review complex conjugate properties before next assignment."
+  }
+];
+export const AI_SUBSTITUTIONS_DATA = [
+  {
+    "id": "SUB-901",
+    "absentFaculty": "Er. Vivek Sharma",
+    "absentSubject": "Pure Mathematics",
+    "instituteCode": "beta",
+    "instituteName": "Beta Institute of Commerce",
+    "affectedBatch": "CA Inter Regular",
+    "classTime": "09:00 AM - 11:00 AM Today",
+    "reason": "Traffic gridlock on highway (Late 22m)",
+    "recommendations": [
+      {
+        "facultyName": "Dr. Harrison Wells",
+        "facultyId": "FAC-01",
+        "qualification": "Ph.D. MIT",
+        "matchPercentage": 98,
+        "availability": "Free Slot (Lab 2)",
+        "rating": 4.9,
+        "action": "Deploy Substitute (1-Click)"
+      },
+      {
+        "facultyName": "Prof. Ananya Roy",
+        "facultyId": "FAC-02",
+        "qualification": "Ph.D. IIT Bombay",
+        "matchPercentage": 92,
+        "availability": "Free Slot (Faculty Room)",
+        "rating": 4.8,
+        "action": "Deploy Substitute"
+      }
+    ]
+  }
+];
+export const AI_PTM_BRIEFS_DATA = [
+  {
+    "studentId": "STU-1001",
+    "studentName": "Aarav Sharma",
+    "batchName": "JEE Advanced Pinnacle",
+    "instituteCode": "alpha",
+    "parentName": "Rajesh Sharma",
+    "overallGrade": "A+ (AIR 142 Rank Prospect)",
+    "keyStrengths": [
+      "Top 3% in Electrostatics & Magnetism",
+      "100% Homework On-Time Submission",
+      "High analytical speed in timed mock sectionals"
+    ],
+    "vulnerableTopics": [
+      "Rotational Inertia integration numericals",
+      "Speed management in Organic Chemistry multi-correct questions"
+    ],
+    "behavioralIndices": {
+      "punctualityStreak": "14 Days",
+      "classroomAttentionScore": "96%",
+      "hwSubmissionRate": "100%"
+    },
+    "parentScript": "Inform Mr. Sharma that Aarav is on track for a top 500 IIT rank. Suggest focusing 30 minutes daily on Organic Chemistry multi-option practice."
+  }
+];
+export const AI_RECOVERY_LEADS_DATA = [
+  {
+    "studentId": "STU-1003",
+    "studentName": "Rohan Verma",
+    "parentName": "Vikram Verma",
+    "parentPhone": "+91 98450 11298",
+    "instituteCode": "alpha",
+    "overdueAmount": 1250,
+    "daysOverdue": 18,
+    "recoveryScore": "High Propensity (88% Recovery Chance)",
+    "riskTier": "Medium Risk",
+    "suggestedLanguage": "Hindi",
+    "suggestedScheduleTime": "07:30 PM Today (Post-Work)",
+    "draftWhatsAppMessage": "\u0906\u0926\u0930\u0923\u0940\u092f \u0935\u093f\u0915\u094d\u0930\u092e \u0935\u0930\u094d\u092e\u093e \u091c\u0940, \u0905\u0932\u094d\u092b\u093e \u0907\u0902\u0938\u094d\u091f\u0940\u091f\u094d\u092f\u0942\u091f \u092e\u0947\u0902 \u0930\u094b\u0939\u0923 \u0935\u0930\u094d\u092e\u093e \u0915\u0940 \u091c\u0947\u0908\u0908 \u090f\u0921\u0935\u093e\u0902\u0938 \u0915\u094b\u091a\u093f\u0902\u0917 \u0915\u0940 \u0915\u093f\u0936\u094d\u0924 $1,250 18 \u0926\u093f\u0928\u094b\u0902 \u0938\u0947 \u0926\u0947\u092f \u0939\u0948\u0964 \u0915\u0943\u092a\u092f\u093e \u0928\u0940\u091a\u0947 \u0926\u093f\u090f \u0917\u090f \u0932\u093f\u0902\u0915 \u0938\u0947 \u0921\u093f\u091c\u093f\u091f\u0932 \u092d\u0941\u0917\u0924\u093e\u0928 \u092a\u0942\u0930\u093e \u0915\u0930\u0947\u0902: https://alpha.tuition.erp/pay/STU-1003",
+    "actionStatus": "WhatsApp Sent (07:30 PM Scheduled)"
+  },
+  {
+    "studentId": "STU-5001",
+    "studentName": "Chloe Dubois",
+    "parentName": "Marc Dubois",
+    "parentPhone": "+33 1 42 68 55 01",
+    "instituteCode": "zenith",
+    "overdueAmount": 950,
+    "daysOverdue": 24,
+    "recoveryScore": "Moderate Propensity (72% Recovery Chance)",
+    "riskTier": "High Risk",
+    "suggestedLanguage": "English",
+    "suggestedScheduleTime": "06:15 PM Today",
+    "draftWhatsAppMessage": "Dear Mr. Marc Dubois, this is a reminder regarding Chloe Dubois's CLAT Super 40 installment of $950 overdue by 24 days. You can pay securely here: https://zenith.tuition.erp/pay/STU-5001",
+    "actionStatus": "Ready for Dispatch"
+  }
+];
+export const AI_SPOOF_LOGS_DATA = [
+  {
+    "id": "SPOOF-101",
+    "gateDoor": "Gate A Turnstile #2",
+    "instituteCode": "alpha",
+    "timestamp": "Today 08:34 AM",
+    "claimedName": "Rohan Verma (STU-1003)",
+    "detectedType": "Digital Photo Screen Spoofing (Mobile Screen Photo)",
+    "livenessScore": 0.04,
+    "spoofConfidence": 99.6,
+    "gateAction": "TURNSTILE LOCKED \u2022 SECURITY ALERT DISPATCHED",
+    "snapshot": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=80"
+  },
+  {
+    "id": "SPOOF-102",
+    "gateDoor": "Main Lobby Turnstile",
+    "instituteCode": "beta",
+    "timestamp": "Yesterday 09:18 AM",
+    "claimedName": "Liam Davies (STU-2002)",
+    "detectedType": "Dual Tailgating / Buddy Punching Attempt",
+    "livenessScore": 0.98,
+    "spoofConfidence": 94.2,
+    "gateAction": "SECOND PERSON FLAGGED \u2022 ALARM SOUNDED",
+    "snapshot": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&auto=format&fit=crop&q=80"
+  }
+];
+
+export const SMTP_EMAIL_DATA = [
+  {
+    "id": "EML-801",
+    "subject": "Monthly Performance Report Card & Rank Digest",
+    "recipient": "parent.aarav@gmail.com",
+    "instituteCode": "alpha",
+    "type": "Academic Digest",
+    "status": "Delivered",
+    "timestamp": "08:15 AM Today",
+    "openRate": "Opened (08:22 AM)",
+    "bounceStatus": "Clean"
+  },
+  {
+    "id": "EML-802",
+    "subject": "Official GST Invoice & Fee Receipt #REC-9012",
+    "recipient": "dr.deshmukh@hospital.org",
+    "instituteCode": "alpha",
+    "type": "Billing Receipt",
+    "status": "Delivered",
+    "timestamp": "Yesterday 04:30 PM",
+    "openRate": "Opened (04:35 PM)",
+    "bounceStatus": "Clean"
+  },
+  {
+    "id": "EML-803",
+    "subject": "Urgent: Parent-Teacher Meeting Appointment Confirmation",
+    "recipient": "vikram.verma@corp.com",
+    "instituteCode": "alpha",
+    "type": "PTM Alert",
+    "status": "Delivered",
+    "timestamp": "Today 09:00 AM",
+    "openRate": "Unopened",
+    "bounceStatus": "Clean"
+  }
+];
+export const WHATSAPP_CRM_DATA = [
+  {
+    "id": "WA-301",
+    "leadName": "Sunil Malhotra (Kabir Malhotra)",
+    "phone": "+91 98200 11990",
+    "course": "2-Year IIT-JEE Integrated",
+    "instituteCode": "alpha",
+    "stage": "Demo Class Booked",
+    "lastMessage": "Can we schedule demo lecture for Saturday 10 AM?",
+    "botAutoReply": "Sent Demo Class Pass & Campus Direction Map",
+    "status": "Active Inquiry"
+  },
+  {
+    "id": "WA-302",
+    "leadName": "Girish Iyer (Meera Iyer)",
+    "phone": "+91 97110 44220",
+    "course": "1-Year NEET Repeater Batch",
+    "instituteCode": "alpha",
+    "stage": "Fees Structure Sent",
+    "lastMessage": "Received fee prospectus PDF. Is installment plan available?",
+    "botAutoReply": "Sent 4-Installment Fee Breakdown PDF",
+    "status": "Follow-up Due"
+  }
+];
+export const FRANCHISE_ROYALTY_DATA = [
+  {
+    "id": "FRAN-101",
+    "centerName": "Alpha Center Kota (Apex Flagship)",
+    "franchisee": "Zenith Academies Pvt Ltd",
+    "instituteCode": "alpha",
+    "grossRevenue": 92500,
+    "royaltyRate": "12.0%",
+    "monthlyRoyaltyDue": 11100,
+    "settlementStatus": "Cleared ACH",
+    "complianceScore": 98.4
+  },
+  {
+    "id": "FRAN-102",
+    "centerName": "Beta South Mumbai Center",
+    "franchisee": "Commercial Edutech Ltd",
+    "instituteCode": "beta",
+    "grossRevenue": 66500,
+    "royaltyRate": "10.0%",
+    "monthlyRoyaltyDue": 6650,
+    "settlementStatus": "Pending Transfer",
+    "complianceScore": 94.2
+  }
+];

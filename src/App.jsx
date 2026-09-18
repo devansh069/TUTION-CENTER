@@ -100,6 +100,18 @@ import SubjectAllocationMatrix from './modules/16_subjects_teachers/SubjectAlloc
 import FacultyWorkloadPlanner from './modules/16_subjects_teachers/FacultyWorkloadPlanner';
 import SubjectsTeachersReports from './modules/16_subjects_teachers/Reports';
 
+// 00: AI Intelligence & Copilot Suite
+import AIDashboard from './modules/00_ai_copilot/Dashboard';
+
+// 17: SMTP / Email Gateway
+import SmtpDashboard from './modules/17_smtp_email/Dashboard';
+
+// 18: WhatsApp Lead Funnel & CRM
+import WhatsAppCrmDashboard from './modules/18_whatsapp_crm/Dashboard';
+
+// 20: Franchise & Multi-Branch Royalty
+import FranchiseRoyaltyDashboard from './modules/20_franchise_royalty/Dashboard';
+
 export default function App() {
   const [selectedInstitute, setSelectedInstitute] = useState('ALL');
   const [activeModule, setActiveModule] = useState('01_institutes_branches');
@@ -130,6 +142,10 @@ export default function App() {
   // Render content dynamically based on activeModule and activePage
   const renderModuleContent = () => {
     switch (activeModule) {
+      // 00: AI Intelligence Suite
+      case '00_ai_copilot':
+        return <AIDashboard instituteCode={selectedInstitute} activeTab={activePage === 'reports' ? activeReportTab : activePage} />;
+
       // 01: Institutes & Branches
       case '01_institutes_branches':
         if (activePage === 'institutes_directory') return <InstitutesDirectory instituteCode={selectedInstitute} />;
@@ -243,6 +259,18 @@ export default function App() {
         if (activePage === 'subjects_workload') return <FacultyWorkloadPlanner instituteCode={selectedInstitute} />;
         if (activePage === 'reports') return <SubjectsTeachersReports instituteCode={selectedInstitute} activeTab={activeReportTab} />;
         return <SubjectsTeachersDashboard instituteCode={selectedInstitute} onNavigate={handleNavigate} />;
+
+      // 17: SMTP / Email Gateway
+      case '17_smtp_email':
+        return <SmtpDashboard instituteCode={selectedInstitute} />;
+
+      // 18: WhatsApp Lead Funnel & CRM
+      case '18_whatsapp_crm':
+        return <WhatsAppCrmDashboard instituteCode={selectedInstitute} />;
+
+      // 20: Franchise & Multi-Branch Royalty
+      case '20_franchise_royalty':
+        return <FranchiseRoyaltyDashboard instituteCode={selectedInstitute} />;
 
       default:
         return <InstitutesDashboard instituteCode={selectedInstitute} onNavigate={handleNavigate} />;

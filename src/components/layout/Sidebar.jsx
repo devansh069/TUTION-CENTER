@@ -2,6 +2,23 @@ import React, { useState } from 'react';
 
 export const MODULE_DEFINITIONS = [
   {
+    id: '00_ai_copilot',
+    title: 'AI Intelligence Suite',
+    icon: '🤖',
+    pages: [
+      { id: 'dashboard', label: 'AI Suite Command Hub' },
+      { id: 'ai_dropout_predictor', label: '1. AI Student Dropout Predictor' },
+      { id: 'ai_ocr_grader', label: '2. AI Vision OCR HW Auto-Grader' },
+      { id: 'ai_substitutions', label: '3. AI Faculty Substitution Engine' },
+      { id: 'ai_ptm_copilot', label: '4. AI PTM Report Copilot' },
+      { id: 'ai_fee_recovery', label: '5. AI Fee Recovery Predictor' },
+      { id: 'ai_anti_spoof', label: '6. AI Turnstile Anti-Spoof' },
+    ],
+    reports: [
+      { id: 'rep_ai_accuracy', label: 'AI Model Precision & ROI' }
+    ]
+  },
+  {
     id: '01_institutes_branches',
     title: 'Institutes & Branches',
     icon: '🏛️',
@@ -232,6 +249,48 @@ export const MODULE_DEFINITIONS = [
       { id: 'rep_feedback', label: 'Student Rating Breakdown' },
     ]
   },
+  {
+    id: '17_smtp_email',
+    title: 'SMTP / Email Gateway',
+    icon: '📧',
+    pages: [
+      { id: 'dashboard', label: 'Dashboard' },
+      { id: 'email_campaigns', label: 'Email Campaign Dispatcher' },
+      { id: 'smtp_relay', label: 'SMTP Relay Telemetry' },
+    ],
+    reports: [
+      { id: 'rep_deliverability', label: 'Deliverability & Open Rates' },
+      { id: 'rep_bounce_audit', label: 'Spam & Hard Bounce Audit' },
+    ]
+  },
+  {
+    id: '18_whatsapp_crm',
+    title: 'WhatsApp Lead Funnel & CRM',
+    icon: '💬',
+    pages: [
+      { id: 'dashboard', label: 'Dashboard' },
+      { id: 'lead_pipeline', label: 'WhatsApp Lead Pipeline Kanban' },
+      { id: 'bot_automations', label: 'AI Bot Workflows' },
+    ],
+    reports: [
+      { id: 'rep_conversion_roi', label: 'Conversion Funnel ROI' },
+      { id: 'rep_channel_velocity', label: 'Response Latency Benchmarks' },
+    ]
+  },
+  {
+    id: '20_franchise_royalty',
+    title: 'Franchise & Multi-Branch Royalty',
+    icon: '👑',
+    pages: [
+      { id: 'dashboard', label: 'Dashboard' },
+      { id: 'royalty_settlements', label: 'Royalty Invoice Settlements' },
+      { id: 'franchise_contracts', label: 'Franchise License Tracker' },
+    ],
+    reports: [
+      { id: 'rep_revenue_share', label: 'Gross Revenue Share Audit' },
+      { id: 'rep_compliance_audit', label: 'Brand Standard Audits' },
+    ]
+  }
 ];
 
 export default function Sidebar({
