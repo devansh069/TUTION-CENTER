@@ -16,6 +16,7 @@ import StudentsReports from './modules/02_students_admissions/Reports';
 
 // Module 03: Batches & Curriculum
 import BatchesDashboard from './modules/03_batches_curriculum/Dashboard';
+import AllBatchesDirectory from './modules/03_batches_curriculum/AllBatchesDirectory';
 import BatchSchedule from './modules/03_batches_curriculum/BatchSchedule';
 import SyllabusTracker from './modules/03_batches_curriculum/SyllabusTracker';
 import BatchesReports from './modules/03_batches_curriculum/Reports';
@@ -171,6 +172,7 @@ export default function App() {
 
       // 03: Batches & Curriculum
       case '03_batches_curriculum':
+        if (activePage === 'all_batches') return <AllBatchesDirectory instituteCode={selectedInstitute} />;
         if (activePage === 'batch_schedule') return <BatchSchedule instituteCode={selectedInstitute} />;
         if (activePage === 'syllabus_tracker') return <SyllabusTracker instituteCode={selectedInstitute} />;
         if (activePage === 'reports') return <BatchesReports instituteCode={selectedInstitute} activeTab={activeReportTab} />;

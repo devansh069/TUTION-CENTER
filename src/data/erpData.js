@@ -11514,4 +11514,168 @@ export const WORK_ALLOTMENT_DATA = [
   }
 ];
 
+export const HW_ASSIGNMENTS_DATA = [
+  {
+    "id": "HW-101",
+    "title": "Rotational Dynamics & Torque Problems - HW 04",
+    "subject": "Advanced Physics",
+    "batchName": "JEE Advanced Pinnacle 2025",
+    "assignedDate": "2026-09-12",
+    "dueDate": "2026-09-18",
+    "totalSubmissions": 118,
+    "maxCapacity": 120,
+    "submissionRate": "98.3%",
+    "checkedRate": "100%",
+    "avgScore": 89,
+    "instituteCode": "alpha",
+    "studentSubmissions": [
+      {
+        "studentId": "STU-1001",
+        "studentName": "Aarav Sharma",
+        "photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80",
+        "score": "94 / 100",
+        "status": "Graded & Checked",
+        "pdfFile": "Aarav_Sharma_Physics_HW4_Rotational.pdf",
+        "pdfUrl": "#",
+        "submittedAt": "Sep 14, 08:30 PM",
+        "aiGradeFeedback": "Step derivations correct. Minor sign error in angular momentum vector cross-product."
+      },
+      {
+        "studentId": "STU-1003",
+        "studentName": "Rohan Verma",
+        "photo": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=120&auto=format&fit=crop&q=80",
+        "score": "82 / 100",
+        "status": "Graded & Checked",
+        "pdfFile": "Rohan_Verma_Physics_HW4.pdf",
+        "pdfUrl": "#",
+        "submittedAt": "Sep 15, 09:15 AM",
+        "aiGradeFeedback": "Good attempt. Missed moment of inertia for hollow cylinder in Problem 3."
+      }
+    ]
+  },
+  {
+    "id": "HW-102",
+    "title": "Organic Reaction Mechanisms & Aldehydes",
+    "subject": "Organic Chemistry",
+    "batchName": "NEET Super-60 Batch A",
+    "assignedDate": "2026-09-14",
+    "dueDate": "2026-09-19",
+    "totalSubmissions": 58,
+    "maxCapacity": 60,
+    "submissionRate": "96.6%",
+    "checkedRate": "90%",
+    "avgScore": 84,
+    "instituteCode": "alpha",
+    "studentSubmissions": [
+      {
+        "studentId": "STU-1002",
+        "studentName": "Ananya Patel",
+        "photo": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=120&auto=format&fit=crop&q=80",
+        "score": "98 / 100",
+        "status": "Graded & Checked",
+        "pdfFile": "Ananya_Patel_Organic_Chemistry_HW.pdf",
+        "pdfUrl": "#",
+        "submittedAt": "Sep 16, 06:45 PM",
+        "aiGradeFeedback": "Flawless electron displacement arrows and nucleophilic attack steps."
+      }
+    ]
+  },
+  {
+    "id": "HW-103",
+    "title": "Differential Calculus & Maxima Minima Problems",
+    "subject": "Pure Mathematics",
+    "batchName": "Class 10 CBSE Foundation",
+    "assignedDate": "2026-09-10",
+    "dueDate": "2026-09-16",
+    "totalSubmissions": 50,
+    "maxCapacity": 52,
+    "submissionRate": "96.1%",
+    "checkedRate": "100%",
+    "avgScore": 91,
+    "instituteCode": "alpha",
+    "studentSubmissions": [
+      {
+        "studentId": "STU-1004",
+        "studentName": "Priya Nair",
+        "photo": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=120&auto=format&fit=crop&q=80",
+        "score": "92 / 100",
+        "status": "Graded & Checked",
+        "pdfFile": "Priya_Nair_Maths_Calculus_HW.pdf",
+        "pdfUrl": "#",
+        "submittedAt": "Sep 15, 05:20 PM",
+        "aiGradeFeedback": "Accurate derivative calculations. Clear step notation."
+      }
+    ]
+  }
+];
+
+export const EXAM_SERIES_DATA = [
+  {
+    "id": "EXAM-301",
+    "title": "All India JEE Advanced Grand Sprint Mock 04",
+    "subject": "Physics, Chemistry & Maths",
+    "batchName": "JEE Advanced Pinnacle 2025",
+    "examDate": "2026-09-18",
+    "duration": "3 Hours (180 mins)",
+    "maxScore": 300,
+    "classAvg": 234,
+    "topScore": 284,
+    "topRanker": "Aarav Sharma (Rank 1)",
+    "isLive": true,
+    "instituteCode": "alpha",
+    "studentReports": [
+      {
+        "studentId": "STU-1001",
+        "studentName": "Aarav Sharma",
+        "photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80",
+        "score": "284 / 300",
+        "percentile": "99.85%",
+        "rank": 1,
+        "status": "Evaluated & Graded",
+        "weakTopics": "Optics Wave Interference",
+        "strengthTopics": "Rotational Dynamics, Organic Reactions"
+      },
+      {
+        "studentId": "STU-1003",
+        "studentName": "Rohan Verma",
+        "photo": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=120&auto=format&fit=crop&q=80",
+        "score": "212 / 300",
+        "percentile": "91.20%",
+        "rank": 14,
+        "status": "Evaluated & Graded",
+        "weakTopics": "Integration by Parts, Vector 3D",
+        "strengthTopics": "Kinematics, Thermodynamics"
+      }
+    ]
+  },
+  {
+    "id": "EXAM-302",
+    "title": "NEET Full Length Anatomy & Botany Mock 02",
+    "subject": "Biology & Organic Chem",
+    "batchName": "NEET Super-60 Batch A",
+    "examDate": "2026-09-15",
+    "duration": "3 Hours 20 Mins",
+    "maxScore": 720,
+    "classAvg": 580,
+    "topScore": 695,
+    "topRanker": "Ananya Patel (Rank 1)",
+    "isLive": false,
+    "instituteCode": "alpha",
+    "studentReports": [
+      {
+        "studentId": "STU-1002",
+        "studentName": "Ananya Patel",
+        "photo": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=120&auto=format&fit=crop&q=80",
+        "score": "695 / 720",
+        "percentile": "99.92%",
+        "rank": 1,
+        "status": "Evaluated & Graded",
+        "weakTopics": "Plant Physiology Enzymes",
+        "strengthTopics": "Human Anatomy, Genetics"
+      }
+    ]
+  }
+];
+
+
 

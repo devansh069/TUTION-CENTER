@@ -54,6 +54,7 @@ export const MODULE_DEFINITIONS = [
     icon: '🗓️',
     pages: [
       { id: 'dashboard', label: 'Dashboard' },
+      { id: 'all_batches', label: 'All Batches Directory & Create' },
       { id: 'batch_schedule', label: 'Batch Schedule Matrix' },
       { id: 'syllabus_tracker', label: 'Syllabus Tracker' },
     ],
